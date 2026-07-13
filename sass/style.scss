@@ -908,3 +908,68 @@ body {
     }
   }
 }
+
+.how-to-enter {
+  margin-top: vw(32);
+  margin-bottom: vw(17);
+}
+
+.how-to-enter__inner {
+  padding-top: vw(32);
+  padding-bottom: vw(20);
+
+  .heading {
+    &__icon {
+      padding: 0;
+    }
+  }
+}
+
+.how-to-enter__steps {
+  margin-top: vw(32);
+  display: flex;
+  flex-direction: column;
+  gap: vw(34);
+  text-align: center;
+
+  .step {
+    .step__circle {
+      img {
+        width: vw(196);
+      }
+    }
+
+    .step__title {
+    }
+
+    .step__text {
+    }
+
+    .step__follow {
+    }
+  }
+}
+
+.how-to-enter__button {
+}
+
+.how-to-enter__deco {
+}
+
+.how-to-enter__deco-map {
+}
+
+.how-to-enter__deco-cat1 {
+}
+
+.how-to-enter__deco-cat2 {
+}
+
+.how-to-enter__deco-pawpads1 {
+}
+
+.how-to-enter__deco-pawpads2 {
+}
+
+.how-to-enter__deco-pawpads3 {
+}

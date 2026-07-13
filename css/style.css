@@ -930,3 +930,32 @@ body {
   display: block;
   width: 100%;
 }
+
+.how-to-enter {
+  margin-top: min(32px, 8.5333333333vw);
+  margin-bottom: min(17px, 4.5333333333vw);
+}
+
+.how-to-enter__inner {
+  padding-top: min(32px, 8.5333333333vw);
+  padding-bottom: min(20px, 5.3333333333vw);
+}
+.how-to-enter__inner .heading__icon {
+  padding: 0;
+}
+
+.how-to-enter__steps {
+  margin-top: min(32px, 8.5333333333vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: min(34px, 9.0666666667vw);
+  text-align: center;
+}
+.how-to-enter__steps .step .step__circle img {
+  width: min(196px, 52.2666666667vw);
+}
