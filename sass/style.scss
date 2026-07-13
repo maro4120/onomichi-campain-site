@@ -912,11 +912,13 @@ body {
 .how-to-enter {
   margin-top: vw(32);
   margin-bottom: vw(17);
+  overflow: hidden;
 }
 
 .how-to-enter__inner {
   padding-top: vw(32);
   padding-bottom: vw(20);
+  position: relative;
 
   .heading {
     &__icon {
@@ -939,13 +941,19 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background: url(../img/sp/how-line.png) no-repeat bottom center / contain;
-      top: calc(100% + vw(16));
+      top: 100%;
       left: 50%;
-      width: 34px;
-      height: 7px;
+      transform: translateX(-50%);
+      width: vw(7);
+      height: vw(34);
+      background: url(../img/sp/how-line.png) no-repeat center / contain;
       z-index: 3;
     }
+
+    &:last-child::after {
+      display: none;
+    }
+    
     .step__circle {
       img {
         width: vw(196);
@@ -954,6 +962,11 @@ body {
 
     .step__title {
       margin-top: vw(16);
+      margin-inline: auto;
+      width: vw(320);
+      font-size: vw(16);
+      font-weight: 700;
+      line-height: 1.6;
     }
 
     .step__text {
@@ -963,6 +976,21 @@ body {
     .step__follow {
       margin-top: vw(16);
       padding: vw(8) vw(12);
+      background: #fff;
+      font-size: vw(14);
+      line-height: 1.6;
+      width: vw(226);
+      height: vw(38);
+      margin-inline: auto;
+
+      a {
+        font-weight: 700;
+      }
+
+      img {
+        margin-right: vw(8);
+        width: vw(16);
+      }
     }
   }
 }
@@ -974,19 +1002,43 @@ body {
 }
 
 .how-to-enter__deco-map {
+  position: absolute;
+  top: vw(32);
+  left: 0;
+  width: 137px;
 }
 
 .how-to-enter__deco-cat1 {
+  position: absolute;
+  top: min(32px, 8.5333333333vw);
+  right: vw(24);
+  width: vw(105);
 }
 
 .how-to-enter__deco-cat2 {
+  position: absolute;
+  top: min(37px, 8.5333333333vw);
+  right: vw(-31);
+  width: vw(94);
 }
 
 .how-to-enter__deco-pawpads1 {
+  position: absolute;
+  top: vw(582);
+  left: vw(20);
+  width: vw(55);
 }
 
 .how-to-enter__deco-pawpads2 {
+  position: absolute;
+  top: vw(106);
+  right: vw(20);
+  width: vw(55);
 }
 
 .how-to-enter__deco-pawpads3 {
+  position: absolute;
+  top: vw(912);
+  right: vw(20);
+  width: vw(55);
 }

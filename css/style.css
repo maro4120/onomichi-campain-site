@@ -934,11 +934,13 @@ body {
 .how-to-enter {
   margin-top: min(32px, 8.5333333333vw);
   margin-bottom: min(17px, 4.5333333333vw);
+  overflow: hidden;
 }
 
 .how-to-enter__inner {
   padding-top: min(32px, 8.5333333333vw);
   padding-bottom: min(20px, 5.3333333333vw);
+  position: relative;
 }
 .how-to-enter__inner .heading__icon {
   padding: 0;
@@ -963,18 +965,28 @@ body {
 .how-to-enter__steps .step::after {
   content: "";
   position: absolute;
-  background: url(../img/sp/how-line.png) no-repeat bottom center/contain;
-  top: calc(100% + min(16px, 4.2666666667vw));
+  top: 100%;
   left: 50%;
-  width: 34px;
-  height: 7px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: min(7px, 1.8666666667vw);
+  height: min(34px, 9.0666666667vw);
+  background: url(../img/sp/how-line.png) no-repeat center/contain;
   z-index: 3;
+}
+.how-to-enter__steps .step:last-child::after {
+  display: none;
 }
 .how-to-enter__steps .step .step__circle img {
   width: min(196px, 52.2666666667vw);
 }
 .how-to-enter__steps .step .step__title {
   margin-top: min(16px, 4.2666666667vw);
+  margin-inline: auto;
+  width: min(320px, 85.3333333333vw);
+  font-size: min(16px, 4.2666666667vw);
+  font-weight: 700;
+  line-height: 1.6;
 }
 .how-to-enter__steps .step .step__text {
   margin-top: min(16px, 4.2666666667vw);
@@ -982,4 +994,59 @@ body {
 .how-to-enter__steps .step .step__follow {
   margin-top: min(16px, 4.2666666667vw);
   padding: min(8px, 2.1333333333vw) min(12px, 3.2vw);
+  background: #fff;
+  font-size: min(14px, 3.7333333333vw);
+  line-height: 1.6;
+  width: min(226px, 60.2666666667vw);
+  height: min(38px, 10.1333333333vw);
+  margin-inline: auto;
+}
+.how-to-enter__steps .step .step__follow a {
+  font-weight: 700;
+}
+.how-to-enter__steps .step .step__follow img {
+  margin-right: min(8px, 2.1333333333vw);
+  width: min(16px, 4.2666666667vw);
+}
+
+.how-to-enter__deco-map {
+  position: absolute;
+  top: min(32px, 8.5333333333vw);
+  left: 0;
+  width: 137px;
+}
+
+.how-to-enter__deco-cat1 {
+  position: absolute;
+  top: min(32px, 8.5333333333vw);
+  right: min(24px, 6.4vw);
+  width: min(105px, 28vw);
+}
+
+.how-to-enter__deco-cat2 {
+  position: absolute;
+  top: min(37px, 8.5333333333vw);
+  right: max(-31px, -8.2666666667vw);
+  width: min(94px, 25.0666666667vw);
+}
+
+.how-to-enter__deco-pawpads1 {
+  position: absolute;
+  top: min(582px, 155.2vw);
+  left: min(20px, 5.3333333333vw);
+  width: min(55px, 14.6666666667vw);
+}
+
+.how-to-enter__deco-pawpads2 {
+  position: absolute;
+  top: min(106px, 28.2666666667vw);
+  right: min(20px, 5.3333333333vw);
+  width: min(55px, 14.6666666667vw);
+}
+
+.how-to-enter__deco-pawpads3 {
+  position: absolute;
+  top: min(912px, 243.2vw);
+  right: min(20px, 5.3333333333vw);
+  width: min(55px, 14.6666666667vw);
 }
