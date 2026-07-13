@@ -933,6 +933,19 @@ body {
   text-align: center;
 
   .step {
+    position: relative;
+    padding-bottom: vw(16);
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../img/sp/how-line.png) no-repeat bottom center / contain;
+      top: calc(100% + vw(16));
+      left: 50%;
+      width: 34px;
+      height: 7px;
+      z-index: 3;
+    }
     .step__circle {
       img {
         width: vw(196);
@@ -940,12 +953,16 @@ body {
     }
 
     .step__title {
+      margin-top: vw(16);
     }
 
     .step__text {
+      margin-top: vw(16);
     }
 
     .step__follow {
+      margin-top: vw(16);
+      padding: vw(8) vw(12);
     }
   }
 }

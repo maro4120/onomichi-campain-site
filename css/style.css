@@ -956,6 +956,30 @@ body {
   gap: min(34px, 9.0666666667vw);
   text-align: center;
 }
+.how-to-enter__steps .step {
+  position: relative;
+  padding-bottom: min(16px, 4.2666666667vw);
+}
+.how-to-enter__steps .step::after {
+  content: "";
+  position: absolute;
+  background: url(../img/sp/how-line.png) no-repeat bottom center/contain;
+  top: calc(100% + min(16px, 4.2666666667vw));
+  left: 50%;
+  width: 34px;
+  height: 7px;
+  z-index: 3;
+}
 .how-to-enter__steps .step .step__circle img {
   width: min(196px, 52.2666666667vw);
+}
+.how-to-enter__steps .step .step__title {
+  margin-top: min(16px, 4.2666666667vw);
+}
+.how-to-enter__steps .step .step__text {
+  margin-top: min(16px, 4.2666666667vw);
+}
+.how-to-enter__steps .step .step__follow {
+  margin-top: min(16px, 4.2666666667vw);
+  padding: min(8px, 2.1333333333vw) min(12px, 3.2vw);
 }
