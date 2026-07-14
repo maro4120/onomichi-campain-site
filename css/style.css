@@ -934,7 +934,7 @@ body {
 .how-to-enter {
   margin-top: min(32px, 8.5333333333vw);
   margin-bottom: min(17px, 4.5333333333vw);
-  overflow: hidden;
+  overflow-x: clip;
 }
 @media screen and (min-width: 900px) {
   .how-to-enter {
@@ -955,6 +955,7 @@ body {
 @media screen and (min-width: 900px) {
   .how-to-enter__inner {
     max-width: 1512px;
+    padding-inline: 20px;
   }
 }
 .how-to-enter__inner .heading__icon {
@@ -978,6 +979,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: inherit;
+  z-index: 1;
 }
 @media screen and (min-width: 900px) {
   .how-to-enter__steps {
@@ -995,7 +998,12 @@ body {
 }
 @media screen and (min-width: 900px) {
   .step {
-    width: 282px;
+    max-width: 294px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .step:nth-of-type(2) {
+    margin-top: 50px;
   }
 }
 .step::after {
@@ -1009,6 +1017,17 @@ body {
   height: min(34px, 9.0666666667vw);
   background: url(../img/sp/how-line.png) no-repeat center/contain;
   z-index: 3;
+}
+@media screen and (min-width: 900px) {
+  .step::after {
+    top: 150px;
+    left: 239px;
+    -webkit-transform: initial;
+            transform: initial;
+    width: 70px;
+    height: 16px;
+    background: url(../img/how-line.png) no-repeat center/contain;
+  }
 }
 .step:last-child::after {
   display: none;
@@ -1092,6 +1111,13 @@ body {
   right: calc(50% - min(163px, 43.4666666667vw));
   width: min(105px, 28vw);
 }
+@media screen and (min-width: 900px) {
+  .how-to-enter__deco-cat1 {
+    top: -26px;
+    width: 238px;
+    right: calc(50% - 438px);
+  }
+}
 
 .how-to-enter__deco-cat2 {
   position: absolute;
@@ -1099,6 +1125,13 @@ body {
   right: calc(50% - min(218px, 58.1333333333vw));
   width: min(94px, 25.0666666667vw);
   z-index: 3;
+}
+@media screen and (min-width: 900px) {
+  .how-to-enter__deco-cat2 {
+    top: -16px;
+    width: 214px;
+    right: calc(50% - 564px);
+  }
 }
 
 .how-to-enter__deco-pawpads1 {
@@ -1110,6 +1143,13 @@ body {
 @media screen and (min-width: 600px) {
   .how-to-enter__deco-pawpads1 {
     left: calc(50% - 230px);
+  }
+}
+@media screen and (min-width: 900px) {
+  .how-to-enter__deco-pawpads1 {
+    bottom: 40px;
+    left: calc(50% - 50vw);
+    width: 70px;
   }
 }
 
@@ -1124,6 +1164,13 @@ body {
     right: calc(50% - 230px);
   }
 }
+@media screen and (min-width: 900px) {
+  .how-to-enter__deco-pawpads2 {
+    top: 148px;
+    width: 70px;
+    right: calc(50% - 50vw);
+  }
+}
 
 .how-to-enter__deco-pawpads3 {
   position: absolute;
@@ -1134,5 +1181,10 @@ body {
 @media screen and (min-width: 600px) {
   .how-to-enter__deco-pawpads3 {
     right: calc(50% - 230px);
+  }
+}
+@media screen and (min-width: 900px) {
+  .how-to-enter__deco-pawpads3 {
+    display: none;
   }
 }

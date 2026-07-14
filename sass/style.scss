@@ -912,7 +912,7 @@ body {
 .how-to-enter {
   margin-top: vw(32);
   margin-bottom: vw(17);
-  overflow: hidden;
+  overflow-x: clip;
 
   @include mq(lg) {
     margin-top: 88px;
@@ -930,6 +930,7 @@ body {
 
   @include mq(lg) {
     max-width: 1512px;
+    padding-inline: 20px;
   }
 
   .heading {
@@ -950,6 +951,8 @@ body {
   gap: vw(34);
   text-align: center;
   justify-content: center;
+  position: inherit;
+  z-index: 1;
 
   @include mq(lg) {
     flex-direction: row;
@@ -962,7 +965,13 @@ body {
   padding-bottom: vw(16);
 
   @include mq(lg) {
-    width: 282px;
+    max-width: 294px;
+  }
+
+  &:nth-of-type(2) {
+    @include mq(lg) {
+      margin-top: 50px;
+    }
   }
 
   &::after {
@@ -975,6 +984,15 @@ body {
     height: vw(34);
     background: url(../img/sp/how-line.png) no-repeat center / contain;
     z-index: 3;
+
+    @include mq(lg) {
+      top: 150px;
+      left: 239px;
+      transform: initial;
+      width: 70px;
+      height: 16px;
+      background: url(../img/how-line.png) no-repeat center / contain;
+    }
   }
 
   &:last-child::after {
@@ -1066,6 +1084,12 @@ body {
   top: min(32px, 8.5333333333vw);
   right: calc(50% - vw(163));
   width: vw(105);
+
+  @include mq(lg) {
+    top: -26px;
+    width: 238px;
+    right: calc(50% - 438px);
+  }
 }
 
 .how-to-enter__deco-cat2 {
@@ -1074,6 +1098,12 @@ body {
   right: calc(50% - vw(218));
   width: vw(94);
   z-index: 3;
+
+  @include mq(lg) {
+    top: -16px;
+    width: 214px;
+    right: calc(50% - 564px);
+  }
 }
 
 .how-to-enter__deco-pawpads1 {
@@ -1084,6 +1114,12 @@ body {
 
   @include mq(md) {
     left: calc(50% - 230px);
+  }
+
+  @include mq(lg) {
+    bottom: 40px;
+    left: calc(50% - 50vw);
+    width: 70px;
   }
 }
 
@@ -1096,6 +1132,12 @@ body {
   @include mq(md) {
     right: calc(50% - 230px);
   }
+
+  @include mq(lg) {
+    top: 148px;
+    width: 70px;
+    right: calc(50% - 50vw);
+  }
 }
 
 .how-to-enter__deco-pawpads3 {
@@ -1106,5 +1148,8 @@ body {
 
   @include mq(md) {
     right: calc(50% - 230px);
+  }
+  @include mq(lg) {
+    display: none;
   }
 }
