@@ -936,14 +936,32 @@ body {
   margin-bottom: min(17px, 4.5333333333vw);
   overflow: hidden;
 }
+@media screen and (min-width: 900px) {
+  .how-to-enter {
+    margin-top: 88px;
+  }
+}
 
 .how-to-enter__inner {
   padding-top: min(32px, 8.5333333333vw);
   padding-bottom: min(20px, 5.3333333333vw);
   position: relative;
 }
+@media screen and (min-width: 600px) {
+  .how-to-enter__inner {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .how-to-enter__inner {
+    max-width: 1512px;
+  }
+}
 .how-to-enter__inner .heading__icon {
   padding: 0;
+}
+.how-to-enter__inner .heading__ja {
+  border-bottom: #ffee56 6px solid;
 }
 
 .how-to-enter__steps {
@@ -957,12 +975,30 @@ body {
           flex-direction: column;
   gap: min(34px, 9.0666666667vw);
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.how-to-enter__steps .step {
+@media screen and (min-width: 900px) {
+  .how-to-enter__steps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 7px;
+  }
+}
+
+.step {
   position: relative;
   padding-bottom: min(16px, 4.2666666667vw);
 }
-.how-to-enter__steps .step::after {
+@media screen and (min-width: 900px) {
+  .step {
+    width: 282px;
+  }
+}
+.step::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -974,24 +1010,41 @@ body {
   background: url(../img/sp/how-line.png) no-repeat center/contain;
   z-index: 3;
 }
-.how-to-enter__steps .step:last-child::after {
+.step:last-child::after {
   display: none;
 }
-.how-to-enter__steps .step .step__circle img {
+.step .step__circle {
   width: min(196px, 52.2666666667vw);
+  margin-inline: auto;
 }
-.how-to-enter__steps .step .step__title {
+@media screen and (min-width: 600px) {
+  .step .step__circle {
+    width: 246px;
+  }
+}
+.step .step__circle img {
+  width: 100%;
+}
+.step .step__title {
   margin-top: min(16px, 4.2666666667vw);
   margin-inline: auto;
-  width: min(320px, 85.3333333333vw);
   font-size: min(16px, 4.2666666667vw);
   font-weight: 700;
   line-height: 1.6;
 }
-.how-to-enter__steps .step .step__text {
+.step .step__text {
   margin-top: min(16px, 4.2666666667vw);
 }
-.how-to-enter__steps .step .step__follow {
+.step .step__text span {
+  font-weight: 700;
+  line-height: 1.6;
+}
+@media screen and (min-width: 600px) {
+  .step .step__text {
+    font-size: 14px;
+  }
+}
+.step .step__follow {
   margin-top: min(16px, 4.2666666667vw);
   padding: min(8px, 2.1333333333vw) min(12px, 3.2vw);
   background: #fff;
@@ -1001,52 +1054,85 @@ body {
   height: min(38px, 10.1333333333vw);
   margin-inline: auto;
 }
-.how-to-enter__steps .step .step__follow a {
+.step .step__follow a {
   font-weight: 700;
 }
-.how-to-enter__steps .step .step__follow img {
+.step .step__follow img {
   margin-right: min(8px, 2.1333333333vw);
   width: min(16px, 4.2666666667vw);
+}
+
+.how-to-enter__button {
+  text-align: center;
 }
 
 .how-to-enter__deco-map {
   position: absolute;
   top: min(32px, 8.5333333333vw);
-  left: 0;
-  width: 137px;
+  left: calc(50% - min(187px, 49.8666666667vw));
+  width: min(137px, 36.5333333333vw);
+}
+@media screen and (min-width: 600px) {
+  .how-to-enter__deco-map {
+    width: 180px;
+    left: calc(50% - 270px);
+  }
+}
+@media screen and (min-width: 900px) {
+  .how-to-enter__deco-map {
+    width: 380px;
+    top: -60px;
+    left: calc(50% - 560px);
+  }
 }
 
 .how-to-enter__deco-cat1 {
   position: absolute;
   top: min(32px, 8.5333333333vw);
-  right: min(24px, 6.4vw);
+  right: calc(50% - min(163px, 43.4666666667vw));
   width: min(105px, 28vw);
 }
 
 .how-to-enter__deco-cat2 {
   position: absolute;
   top: min(37px, 8.5333333333vw);
-  right: max(-31px, -8.2666666667vw);
+  right: calc(50% - min(218px, 58.1333333333vw));
   width: min(94px, 25.0666666667vw);
+  z-index: 3;
 }
 
 .how-to-enter__deco-pawpads1 {
   position: absolute;
   top: min(582px, 155.2vw);
-  left: min(20px, 5.3333333333vw);
+  left: calc(50% - min(167px, 44.5333333333vw));
   width: min(55px, 14.6666666667vw);
+}
+@media screen and (min-width: 600px) {
+  .how-to-enter__deco-pawpads1 {
+    left: calc(50% - 230px);
+  }
 }
 
 .how-to-enter__deco-pawpads2 {
   position: absolute;
   top: min(106px, 28.2666666667vw);
-  right: min(20px, 5.3333333333vw);
+  right: calc(50% - min(167px, 44.5333333333vw));
   width: min(55px, 14.6666666667vw);
+}
+@media screen and (min-width: 600px) {
+  .how-to-enter__deco-pawpads2 {
+    right: calc(50% - 230px);
+  }
 }
 
 .how-to-enter__deco-pawpads3 {
   position: absolute;
   top: min(912px, 243.2vw);
-  right: min(20px, 5.3333333333vw);
+  right: calc(50% - min(167px, 44.5333333333vw));
   width: min(55px, 14.6666666667vw);
+}
+@media screen and (min-width: 600px) {
+  .how-to-enter__deco-pawpads3 {
+    right: calc(50% - 230px);
+  }
 }

@@ -913,6 +913,10 @@ body {
   margin-top: vw(32);
   margin-bottom: vw(17);
   overflow: hidden;
+
+  @include mq(lg) {
+    margin-top: 88px;
+  }
 }
 
 .how-to-enter__inner {
@@ -920,9 +924,21 @@ body {
   padding-bottom: vw(20);
   position: relative;
 
+  @include mq(md) {
+    max-width: 500px;
+  }
+
+  @include mq(lg) {
+    max-width: 1512px;
+  }
+
   .heading {
     &__icon {
       padding: 0;
+    }
+
+    &__ja {
+      border-bottom: #ffee56 6px solid;
     }
   }
 }
@@ -933,69 +949,95 @@ body {
   flex-direction: column;
   gap: vw(34);
   text-align: center;
+  justify-content: center;
 
-  .step {
-    position: relative;
-    padding-bottom: vw(16);
+  @include mq(lg) {
+    flex-direction: row;
+    gap: 7px;
+  }
+}
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: vw(7);
-      height: vw(34);
-      background: url(../img/sp/how-line.png) no-repeat center / contain;
-      z-index: 3;
+.step {
+  position: relative;
+  padding-bottom: vw(16);
+
+  @include mq(lg) {
+    width: 282px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: vw(7);
+    height: vw(34);
+    background: url(../img/sp/how-line.png) no-repeat center / contain;
+    z-index: 3;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  .step__circle {
+    width: vw(196);
+    margin-inline: auto;
+
+    @include mq(md) {
+      width: 246px;
     }
 
-    &:last-child::after {
-      display: none;
+    img {
+      width: 100%;
     }
-    
-    .step__circle {
-      img {
-        width: vw(196);
-      }
-    }
+  }
 
-    .step__title {
-      margin-top: vw(16);
-      margin-inline: auto;
-      width: vw(320);
-      font-size: vw(16);
+  .step__title {
+    margin-top: vw(16);
+    margin-inline: auto;
+    font-size: vw(16);
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .step__text {
+    margin-top: vw(16);
+
+    span {
       font-weight: 700;
       line-height: 1.6;
     }
 
-    .step__text {
-      margin-top: vw(16);
+    @include mq(md) {
+      font-size: 14px;
+    }
+  }
+
+  .step__follow {
+    margin-top: vw(16);
+    padding: vw(8) vw(12);
+    background: #fff;
+    font-size: vw(14);
+    line-height: 1.6;
+    width: vw(226);
+    height: vw(38);
+    margin-inline: auto;
+
+    a {
+      font-weight: 700;
     }
 
-    .step__follow {
-      margin-top: vw(16);
-      padding: vw(8) vw(12);
-      background: #fff;
-      font-size: vw(14);
-      line-height: 1.6;
-      width: vw(226);
-      height: vw(38);
-      margin-inline: auto;
-
-      a {
-        font-weight: 700;
-      }
-
-      img {
-        margin-right: vw(8);
-        width: vw(16);
-      }
+    img {
+      margin-right: vw(8);
+      width: vw(16);
     }
   }
 }
 
 .how-to-enter__button {
+  text-align: center;
 }
 
 .how-to-enter__deco {
@@ -1004,41 +1046,65 @@ body {
 .how-to-enter__deco-map {
   position: absolute;
   top: vw(32);
-  left: 0;
-  width: 137px;
+  left: calc(50% - vw(187));
+  width: vw(137);
+
+  @include mq(md) {
+    width: 180px;
+    left: calc(50% - 270px);
+  }
+
+  @include mq(lg) {
+    width: 380px;
+    top: -60px;
+    left: calc(50% - 560px);
+  }
 }
 
 .how-to-enter__deco-cat1 {
   position: absolute;
   top: min(32px, 8.5333333333vw);
-  right: vw(24);
+  right: calc(50% - vw(163));
   width: vw(105);
 }
 
 .how-to-enter__deco-cat2 {
   position: absolute;
   top: min(37px, 8.5333333333vw);
-  right: vw(-31);
+  right: calc(50% - vw(218));
   width: vw(94);
+  z-index: 3;
 }
 
 .how-to-enter__deco-pawpads1 {
   position: absolute;
   top: vw(582);
-  left: vw(20);
+  left: calc(50% - vw(167));
   width: vw(55);
+
+  @include mq(md) {
+    left: calc(50% - 230px);
+  }
 }
 
 .how-to-enter__deco-pawpads2 {
   position: absolute;
   top: vw(106);
-  right: vw(20);
+  right: calc(50% - vw(167));
   width: vw(55);
+
+  @include mq(md) {
+    right: calc(50% - 230px);
+  }
 }
 
 .how-to-enter__deco-pawpads3 {
   position: absolute;
   top: vw(912);
-  right: vw(20);
+  right: calc(50% - vw(167));
   width: vw(55);
+
+  @include mq(md) {
+    right: calc(50% - 230px);
+  }
 }
