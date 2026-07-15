@@ -1094,14 +1094,14 @@ body {
   }
 
   .step__follow {
+    display: inline-block;
     margin-top: vw(16);
-    padding: vw(8) vw(12) vw(8) vw(40);
+    padding: vw(8) vw(12);
     background: #fff;
     font-size: vw(14);
     line-height: 1.6;
 
     @include mq(xl) {
-      width: 254px;
       font-size: 16px;
     }
 
