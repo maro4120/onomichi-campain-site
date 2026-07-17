@@ -1262,37 +1262,100 @@ body {
 }
 
 .prizes {
-
 }
 
 .prizes__inner {
-
 }
 
 .prizes__contents {
-
 }
 
 .prizes__deco-triangle-l {
-
 }
 
 .prizes__deco-triangle-r {
-
 }
 
 .prizes-heading {
-
 }
 
-.prizes-heading__deco{
-  
+.prizes-heading__deco {
 }
 
 .prizes__lead {
-
 }
 
 .prizes__card {
+}
 
+.prize-card {
+}
+
+.prize-card__button {
+}
+
+.js-modal-open {
+}
+
+.prize-card__badge {
+}
+
+.prize-card__photo {
+}
+
+.prize-card__name {
+}
+
+.prize-card__zoom {
+}
+
+.prize-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  &.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.prize-modal__content {
+  background: #fff;
+  border-radius: vw(24);
+  width: vw(336);
+  max-width: calc(100% - vw(20));
+  height: vw(480);
+  padding-bottom: vw(56);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: vw(39);
+}
+
+.prize-modal__photo {
+  width: calc(100% - vw(40));
+  margin-left: vw(20);
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+}
+
+.prize-modal__title {
+}
+
+.prize-modal__text {
+}
+
+.js-modal-close {
+}
+
+.prizes__button {
+}
+
+.prizes__bg {
 }
