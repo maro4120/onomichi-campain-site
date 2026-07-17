@@ -1331,27 +1331,31 @@ body {
   padding-bottom: vw(56);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: vw(39);
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 .prize-modal__photo {
-  width: calc(100% - vw(40));
-  margin-left: vw(20);
   img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     vertical-align: middle;
   }
 }
 
 .prize-modal__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: vw(39);
 }
 
 .prize-modal__text {
+  margin-top: vw(12);
 }
 
 .js-modal-close {
+  margin-top: vw(16);
 }
 
 .prizes__button {
