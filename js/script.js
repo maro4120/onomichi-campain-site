@@ -40,6 +40,7 @@ document.querySelectorAll(".js-modal-open").forEach((btn) => {
   btn.addEventListener("click",() => {
     const id = btn.dataset.modal;
     document.querySelector(`#modal-${id}`).classList.add("is-open");
+    document.body.classList.add("is-modal-open");
   });
 });
 
@@ -47,6 +48,7 @@ document.querySelectorAll(".prize-modal").forEach((modal) => {
   modal.addEventListener("click", (e) =>{
     if(e.target.closest(".js-modal-close") || e.target === modal){
       modal.classList.remove("is-open");
+      document.body.classList.remove("is-modal-open");
     }
   });
 });

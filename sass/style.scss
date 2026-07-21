@@ -43,6 +43,10 @@ body {
   font-size: 12px;
   line-height: 1.6;
   font-weight: 400;
+
+  .is-modal-open {
+    overflow: hidden;
+  }
 }
 
 @include mq(sm) {
@@ -1337,10 +1341,14 @@ body {
 }
 
 .prize-modal__photo {
+  width: 100%;
+  height: vw(210);
+
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     vertical-align: middle;
+    object-fit: cover;
   }
 }
 
