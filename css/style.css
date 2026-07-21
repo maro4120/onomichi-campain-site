@@ -1318,6 +1318,94 @@ body.is-modal-open {
   }
 }
 
+.prizes {
+  margin-top: min(120px, 32vw);
+}
+
+.prizes__inner {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 24px;
+  position: relative;
+}
+
+.prizes-heading {
+  position: absolute;
+  top: max(-83px, -22.1333333333vw);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: min(15px, 4vw);
+  width: min(237px, 63.2vw);
+  height: min(83px, 22.1333333333vw);
+  background: url(../img/pr-deco.png) no-repeat center center/contain;
+  z-index: 2;
+}
+
+.prizes__lead {
+  position: absolute;
+  top: min(60px, 16vw);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: calc(100% - min(20px, 5.3333333333vw) * 2);
+  text-align: center;
+}
+
+.prizes__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: min(15px, 4vw);
+}
+.prizes__card .prize-card:last-child {
+  grid-column: 1/-1;
+  justify-self: center;
+  width: calc(50% - min(8px, 2.1333333333vw));
+}
+
+.prize-card {
+  position: relative;
+  top: min(146px, 38.9333333333vw);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.prize-card__button:hover .prize-card__photo img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.prize-card__badge {
+  position: absolute;
+  top: max(-24px, -6.4vw);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: min(48px, 12.8vw);
+}
+
+.prize-card__photo {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.prize-card__photo img {
+  width: 100%;
+  height: min(140px, 37.3333333333vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.prize-card__zoom {
+  position: absolute;
+  right: min(8px, 2.1333333333vw);
+  bottom: min(8px, 2.1333333333vw);
+}
+
 .prize-modal {
   display: none;
   position: fixed;
