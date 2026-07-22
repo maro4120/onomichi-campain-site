@@ -1275,6 +1275,8 @@ body {
   border-radius: 24px;
   position: relative;
   padding-top: vw(60);
+  padding-bottom: vw(34);
+  z-index: 1;
 }
 
 .prizes__contents {
@@ -1435,7 +1437,30 @@ body {
 }
 
 .prizes__button {
+  margin-top: vw(24);
 }
 
 .prizes__bg {
+  position: relative;
+}
+
+.prizes__bg-1 {
+  position: absolute;
+  top: vw(-38);
+  left: 50%;
+  transform: translateX(-50%);
+  width: vw(580);
+  img {
+    width: 100%;
+  }
+}
+
+.prizes__bg-2 {
+  position: absolute;
+  top: vw(170);
+  left: 0;
+  display: flex;
+  img {
+    width: vw(96);
+  }
 }

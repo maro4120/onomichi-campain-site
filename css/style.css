@@ -1328,6 +1328,8 @@ body.is-modal-open {
   border-radius: 24px;
   position: relative;
   padding-top: min(60px, 16vw);
+  padding-bottom: min(34px, 9.0666666667vw);
+  z-index: 1;
 }
 
 .prizes-heading {
@@ -1491,4 +1493,36 @@ body.is-modal-open {
 
 .js-modal-close {
   margin-top: min(16px, 4.2666666667vw);
+}
+
+.prizes__button {
+  margin-top: min(24px, 6.4vw);
+}
+
+.prizes__bg {
+  position: relative;
+}
+
+.prizes__bg-1 {
+  position: absolute;
+  top: max(-38px, -10.1333333333vw);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: min(580px, 154.6666666667vw);
+}
+.prizes__bg-1 img {
+  width: 100%;
+}
+
+.prizes__bg-2 {
+  position: absolute;
+  top: min(170px, 45.3333333333vw);
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.prizes__bg-2 img {
+  width: min(96px, 25.6vw);
 }
