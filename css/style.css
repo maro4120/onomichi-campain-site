@@ -1404,14 +1404,27 @@ body.is-modal-open {
 }
 
 .prize-card__name {
-  background: #F5F5F5;
   height: min(56px, 14.9333333333vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  color: #4a3636;
+  background: url(../img/pr-Rectangle.svg) no-repeat right bottom/min(36px, 9.6vw) auto, #f5f5f5;
 }
 
 .prize-card__zoom {
   position: absolute;
-  right: min(8px, 2.1333333333vw);
-  bottom: min(8px, 2.1333333333vw);
+  width: min(12px, 3.2vw);
+  right: min(5px, 1.3333333333vw);
+  bottom: min(6px, 1.6vw);
 }
 
 .prize-modal {
