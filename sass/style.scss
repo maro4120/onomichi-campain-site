@@ -1327,7 +1327,11 @@ body {
 
 .prize-card {
   position: relative;
+}
+
+.prize-card__button {
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .prize-card__button:hover .prize-card__photo img {
@@ -1343,6 +1347,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: vw(48);
+  z-index: 2;
 }
 
 .prize-card__photo {
