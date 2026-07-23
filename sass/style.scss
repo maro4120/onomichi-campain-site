@@ -1297,7 +1297,7 @@ body {
   padding-top: vw(15);
   width: vw(237);
   height: vw(83);
-  background: url(../img/pr-deco.png) no-repeat center center / contain;
+  background: url(../img/sp/pr-deco.png) no-repeat center center / contain;
   z-index: 2;
 }
 
@@ -1333,6 +1333,8 @@ body {
 }
 
 .prize-card__button {
+  display: block;
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1358,7 +1360,8 @@ body {
 
   img {
     width: 100%;
-    height: vw(140);
+    aspect-ratio: 160/ 140;
+    height: auto;
     object-fit: cover;
     transition: transform 0.3s;
   }
@@ -1439,20 +1442,24 @@ body {
 
 .prizes__button {
   margin-top: vw(24);
+  text-align: center;
 }
 
 .prizes__bg {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -43px;
 }
 
 .prizes__bg-1 {
-  position: absolute;
-  top: vw(-38);
-  left: 50%;
-  transform: translateX(-50%);
-  width: vw(580);
+  display: block;
+  width: 100%;
+  min-width: 580px;
   img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
   }
 }
 

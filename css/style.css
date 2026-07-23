@@ -1342,7 +1342,7 @@ body.is-modal-open {
   padding-top: min(15px, 4vw);
   width: min(237px, 63.2vw);
   height: min(83px, 22.1333333333vw);
-  background: url(../img/pr-deco.png) no-repeat center center/contain;
+  background: url(../img/sp/pr-deco.png) no-repeat center center/contain;
   z-index: 2;
 }
 
@@ -1373,6 +1373,8 @@ body.is-modal-open {
 }
 
 .prize-card__button {
+  display: block;
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1397,7 +1399,8 @@ body.is-modal-open {
 }
 .prize-card__photo img {
   width: 100%;
-  height: min(140px, 37.3333333333vw);
+  aspect-ratio: 160/140;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: -webkit-transform 0.3s;
@@ -1498,22 +1501,31 @@ body.is-modal-open {
 
 .prizes__button {
   margin-top: min(24px, 6.4vw);
+  text-align: center;
 }
 
 .prizes__bg {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -43px;
 }
 
 .prizes__bg-1 {
-  position: absolute;
-  top: max(-38px, -10.1333333333vw);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: min(580px, 154.6666666667vw);
+  display: block;
+  width: 100%;
+  min-width: 580px;
 }
 .prizes__bg-1 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .prizes__bg-2 {
