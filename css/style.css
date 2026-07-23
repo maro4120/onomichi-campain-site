@@ -1320,6 +1320,7 @@ body.is-modal-open {
 
 .prizes {
   margin-top: min(120px, 32vw);
+  overflow-x: clip;
 }
 
 .prizes__inner {

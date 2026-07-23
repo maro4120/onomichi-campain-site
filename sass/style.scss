@@ -1267,6 +1267,7 @@ body {
 
 .prizes {
   margin-top: vw(120);
+  overflow-x: clip;
 }
 
 .prizes__inner {
