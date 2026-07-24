@@ -1266,61 +1266,128 @@ body {
 }
 
 .prizes {
-  margin-top: vw(120);
+  margin-top: vw(32);
   overflow-x: clip;
+
+  @include mq(lg) {
+    margin-top: 120px;
+  }
 }
 
 .prizes__inner {
-  background-color: #fff;
-  width: 100%;
   max-width: 600px;
-  border-radius: 24px;
-  position: relative;
-  padding-top: vw(60);
-  padding-bottom: vw(34);
-  z-index: 1;
+  padding-inline: 0;
 
   @include mq(lg) {
-    max-width: 1024px;
-    width: calc(100% - 30px * 2);
+    max-width: 1084px;
     padding-inline: 30px;
   }
 }
 
 .prizes__contents {
+  position: relative;
+  padding-top: vw(20);
+  padding-bottom: vw(30);
+  padding-inline: vw(20);
+  z-index: 2;
+
+  @include mq(lg) {
+    max-width: 100%;
+    padding: 30px 30px 49px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    background-color: #fff;
+  }
+
+  &::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: vw(238);
+    height: vw(83);
+    background: url(../img/sp/pr-deco.png) no-repeat center center / cover;
+
+    @include mq(lg) {
+      background: url(../img/pr-deco.png) no-repeat center center / cover;
+      height: 148px;
+      width: 372px;
+    }
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 83px);
+    border-radius: 24px;
+
+    @include mq(lg) {
+      height: calc(100% - 148px);
+    }
+  }
+}
+
+.prizes__deco-triangle-l,
+.prizes__deco-triangle-r {
+  width: calc((100% - 390px) / 2);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  min-height: 148px;
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
 }
 
 .prizes__deco-triangle-l {
+  left: 0;
 }
 
 .prizes__deco-triangle-r {
+  right: 0;
 }
 
 .prizes-heading {
-  position: absolute;
-  top: vw(-83);
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: vw(15);
-  width: vw(237);
-  height: vw(83);
-  background: url(../img/sp/pr-deco.png) no-repeat center center / contain;
   z-index: 2;
+  .heading__icon {
+    padding: vw(3) vw(3) vw(4);
+  }
+
+  @include mq(lg) {
+  }
 }
 
 .prizes-heading__deco {
 }
 
 .prizes__lead {
-  text-align: center;
+  margin-top: vw(16);
   margin-inline: auto;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: 14px;
+  }
 }
 
-.prizes__card {
+.prizes__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: vw(15);
   margin-top: vw(48);
+
+  @include mq(lg) {
+    gap: 0;
+    margin-top: 82px;
+  }
 
   .prize-card:nth-child(3),
   .prize-card:nth-child(4) {
@@ -1337,6 +1404,13 @@ body {
 
 .prize-card {
   position: relative;
+
+  @include mq(lg) {
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      width: calc(50% - 16px);
+    }
+  }
 }
 
 .prize-card__button {
@@ -1344,6 +1418,10 @@ body {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+
+  @include mq(lg) {
+    border-radius: 24px;
+  }
 }
 
 .prize-card__button:hover .prize-card__photo img {
@@ -1360,6 +1438,11 @@ body {
   transform: translateX(-50%);
   width: vw(48);
   z-index: 2;
+
+  @include mq(lg) {
+    top: -40px;
+    width: 80px;
+  }
 }
 
 .prize-card__photo {
@@ -1385,6 +1468,10 @@ body {
   background:
     url(../img/pr-Rectangle.svg) no-repeat right bottom / vw(36) auto,
     #f5f5f5;
+
+  @include mq(md) {
+    font-size: 14px;
+  }
 }
 
 .prize-card__zoom {

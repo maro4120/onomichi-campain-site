@@ -1319,57 +1319,136 @@ body.is-modal-open {
 }
 
 .prizes {
-  margin-top: min(120px, 32vw);
+  margin-top: min(32px, 8.5333333333vw);
   overflow-x: clip;
+}
+@media screen and (min-width: 900px) {
+  .prizes {
+    margin-top: 120px;
+  }
 }
 
 .prizes__inner {
-  background-color: #fff;
-  width: 100%;
   max-width: 600px;
-  border-radius: 24px;
-  position: relative;
-  padding-top: min(60px, 16vw);
-  padding-bottom: min(34px, 9.0666666667vw);
-  z-index: 1;
+  padding-inline: 0;
 }
 @media screen and (min-width: 900px) {
   .prizes__inner {
-    max-width: 1024px;
-    width: calc(100% - 60px);
+    max-width: 1084px;
     padding-inline: 30px;
   }
 }
 
-.prizes-heading {
+.prizes__contents {
+  position: relative;
+  padding-top: min(20px, 5.3333333333vw);
+  padding-bottom: min(30px, 8vw);
+  padding-inline: min(20px, 5.3333333333vw);
+  z-index: 2;
+}
+@media screen and (min-width: 900px) {
+  .prizes__contents {
+    max-width: 100%;
+    padding: 30px 30px 49px;
+  }
+}
+.prizes__contents::before, .prizes__contents::after {
   position: absolute;
-  top: max(-83px, -22.1333333333vw);
+  z-index: -1;
+  content: "";
+  background-color: #fff;
+}
+.prizes__contents::before {
+  top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding-top: min(15px, 4vw);
-  width: min(237px, 63.2vw);
+  width: min(238px, 63.4666666667vw);
   height: min(83px, 22.1333333333vw);
-  background: url(../img/sp/pr-deco.png) no-repeat center center/contain;
+  background: url(../img/sp/pr-deco.png) no-repeat center center/cover;
+}
+@media screen and (min-width: 900px) {
+  .prizes__contents::before {
+    background: url(../img/pr-deco.png) no-repeat center center/cover;
+    height: 148px;
+    width: 372px;
+  }
+}
+.prizes__contents::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 83px);
+  border-radius: 24px;
+}
+@media screen and (min-width: 900px) {
+  .prizes__contents::after {
+    height: calc(100% - 148px);
+  }
+}
+
+.prizes__deco-triangle-l,
+.prizes__deco-triangle-r {
+  width: calc((100% - 390px) / 2);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 148px;
+}
+.prizes__deco-triangle-l img,
+.prizes__deco-triangle-r img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.prizes__deco-triangle-l {
+  left: 0;
+}
+
+.prizes__deco-triangle-r {
+  right: 0;
+}
+
+.prizes-heading {
   z-index: 2;
 }
-
+.prizes-heading .heading__icon {
+  padding: min(3px, 0.8vw) min(3px, 0.8vw) min(4px, 1.0666666667vw);
+}
 .prizes__lead {
-  text-align: center;
+  margin-top: min(16px, 4.2666666667vw);
   margin-inline: auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .prizes__lead {
+    font-size: 14px;
+  }
 }
 
-.prizes__card {
+.prizes__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: min(15px, 4vw);
   margin-top: min(48px, 12.8vw);
 }
-.prizes__card .prize-card:nth-child(3),
-.prizes__card .prize-card:nth-child(4) {
+@media screen and (min-width: 900px) {
+  .prizes__cards {
+    gap: 0;
+    margin-top: 82px;
+  }
+}
+.prizes__cards .prize-card:nth-child(3),
+.prizes__cards .prize-card:nth-child(4) {
   margin-top: min(24px, 6.4vw);
 }
-.prizes__card .prize-card:last-child {
+.prizes__cards .prize-card:last-child {
   grid-column: 1/-1;
   justify-self: center;
   width: calc(50% - min(8px, 2.1333333333vw));
@@ -1379,12 +1458,22 @@ body.is-modal-open {
 .prize-card {
   position: relative;
 }
+@media screen and (min-width: 900px) {
+  .prize-card:nth-of-type(1), .prize-card:nth-of-type(2) {
+    width: calc(50% - 16px);
+  }
+}
 
 .prize-card__button {
   display: block;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .prize-card__button {
+    border-radius: 24px;
+  }
 }
 
 .prize-card__button:hover .prize-card__photo img {
@@ -1400,6 +1489,12 @@ body.is-modal-open {
           transform: translateX(-50%);
   width: min(48px, 12.8vw);
   z-index: 2;
+}
+@media screen and (min-width: 900px) {
+  .prize-card__badge {
+    top: -40px;
+    width: 80px;
+  }
 }
 
 .prize-card__photo {
@@ -1432,6 +1527,11 @@ body.is-modal-open {
   font-weight: 700;
   color: #4a3636;
   background: url(../img/pr-Rectangle.svg) no-repeat right bottom/min(36px, 9.6vw) auto, #f5f5f5;
+}
+@media screen and (min-width: 600px) {
+  .prize-card__name {
+    font-size: 14px;
+  }
 }
 
 .prize-card__zoom {
