@@ -1431,6 +1431,12 @@ body {
     &:nth-of-type(4) {
       width: calc((100% - 72px) / 3);
     }
+    &:nth-of-type(3) .prize-card__photo img,
+    &:nth-of-type(4) .prize-card__photo img,
+    &:last-child .prize-card__photo img {
+      height: 240px;
+      aspect-ratio: auto;
+    }
   }
 }
 
@@ -1467,6 +1473,7 @@ body {
 }
 
 .prize-card__photo {
+  display: block;
   overflow: hidden;
 
   img {
@@ -1498,8 +1505,8 @@ body {
     min-height: 120px;
     font-size: 20px;
     background:
-    url(../img/pr-Rectangle.svg) no-repeat right bottom / 100px auto,
-    #f5f5f5;
+      url(../img/pr-Rectangle.svg) no-repeat right bottom / 100px auto,
+      #f5f5f5;
   }
 }
 

@@ -1490,6 +1490,10 @@ body.is-modal-open {
   .prize-card:nth-of-type(3), .prize-card:nth-of-type(4) {
     width: calc((100% - 72px) / 3);
   }
+  .prize-card:nth-of-type(3) .prize-card__photo img, .prize-card:nth-of-type(4) .prize-card__photo img, .prize-card:last-child .prize-card__photo img {
+    height: 240px;
+    aspect-ratio: auto;
+  }
 }
 
 .prize-card__button {
@@ -1526,6 +1530,7 @@ body.is-modal-open {
 }
 
 .prize-card__photo {
+  display: block;
   overflow: hidden;
 }
 .prize-card__photo img {
