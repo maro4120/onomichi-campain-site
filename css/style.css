@@ -1440,6 +1440,14 @@ body.is-modal-open {
 }
 @media screen and (min-width: 900px) {
   .prizes__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 0;
     margin-top: 82px;
   }
@@ -1461,6 +1469,16 @@ body.is-modal-open {
 @media screen and (min-width: 900px) {
   .prize-card:nth-of-type(1), .prize-card:nth-of-type(2) {
     width: calc(50% - 16px);
+  }
+  .prize-card:nth-of-type(2) {
+    margin-left: 32px;
+  }
+  .prize-card:nth-of-type(3), .prize-card:nth-of-type(4), .prize-card:nth-of-type(5) {
+    width: calc(33.3333333333% - 24px);
+    margin-top: 80px;
+  }
+  .prize-card:nth-of-type(4), .prize-card:nth-of-type(5) {
+    margin-left: 36px;
   }
 }
 
@@ -1531,6 +1549,12 @@ body.is-modal-open {
 @media screen and (min-width: 600px) {
   .prize-card__name {
     font-size: 14px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .prize-card__name {
+    min-height: 120px;
+    font-size: 20px;
   }
 }
 
@@ -1634,16 +1658,4 @@ body.is-modal-open {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-
-.prizes__bg-2 {
-  position: absolute;
-  top: min(170px, 45.3333333333vw);
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.prizes__bg-2 img {
-  width: min(96px, 25.6vw);
 }
