@@ -1611,7 +1611,7 @@ body {
   padding-top: vw(46);
   padding-bottom: vw(46);
   margin-top: vw(-46);
-  background-color: $main-color;
+  background-color: $color-key1;
   overflow: hidden;
 
   @include mq(lg) {
@@ -1636,6 +1636,8 @@ body {
 
 .spots__heading {
   position: relative;
+  display: inline-block;
+  padding-left: vw(36);
   font-family: $font-family-ja2;
   font-size: vw(28);
   font-weight: 500;
@@ -1646,10 +1648,12 @@ body {
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
     width: vw(28);
+    height: vw(28);
     background: url(../img/sp-hoshi-Icon.png) no-repeat center center / contain;
     transform: translateY(-50%);
   }
@@ -1678,6 +1682,7 @@ body {
   padding-bottom: vw(31);
   text-align: left;
   gap: vw(16);
+  overflow: hidden;
 
   @include mq(lg) {
     border-radius: 24px;
@@ -1689,6 +1694,8 @@ body {
 
 .spot-card__photo {
   display: block;
+  width: calc(100% + 24px * 2);
+  margin-left: -24px;
 
   img {
     width: 100%;
@@ -1735,6 +1742,7 @@ body {
 }
 
 .spots__bottom {
+  text-align: center;
 }
 
 .spots__decoration-english {

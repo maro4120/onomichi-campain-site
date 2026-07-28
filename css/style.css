@@ -1697,7 +1697,7 @@ body.is-modal-open {
   padding-top: min(46px, 12.2666666667vw);
   padding-bottom: min(46px, 12.2666666667vw);
   margin-top: max(-46px, -12.2666666667vw);
-  background-color: #9ed0e0;
+  background-color: #67b0c7;
   overflow: hidden;
 }
 @media screen and (min-width: 900px) {
@@ -1714,6 +1714,8 @@ body.is-modal-open {
 
 .spots__heading {
   position: relative;
+  display: inline-block;
+  padding-left: min(36px, 9.6vw);
   font-family: "Kiwi Maru", serif;
   font-size: min(28px, 7.4666666667vw);
   font-weight: 500;
@@ -1725,10 +1727,12 @@ body.is-modal-open {
   }
 }
 .spots__heading::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
   width: min(28px, 7.4666666667vw);
+  height: min(28px, 7.4666666667vw);
   background: url(../img/sp-hoshi-Icon.png) no-repeat center center/contain;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1762,6 +1766,7 @@ body.is-modal-open {
   padding-bottom: min(31px, 8.2666666667vw);
   text-align: left;
   gap: min(16px, 4.2666666667vw);
+  overflow: hidden;
 }
 @media screen and (min-width: 900px) {
   .spot-card {
@@ -1774,6 +1779,8 @@ body.is-modal-open {
 
 .spot-card__photo {
   display: block;
+  width: calc(100% + 48px);
+  margin-left: -24px;
 }
 .spot-card__photo img {
   width: 100%;
@@ -1797,6 +1804,10 @@ body.is-modal-open {
   .spot-card__text {
     font-size: 16px;
   }
+}
+
+.spots__bottom {
+  text-align: center;
 }
 
 .page-top {
