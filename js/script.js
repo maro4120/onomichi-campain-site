@@ -53,15 +53,18 @@ document.querySelectorAll(".prize-modal").forEach((modal) => {
   });
 });
 
-const swiper = new Swiper
-("#js-spots-swiper", {
-  // Optional parameters
+const swiper = new Swiper("#js-spots-swiper", {
   loop: true,
-
-  // Navigation arrows
+  slidesPerView: "auto",
+  spaceBetween: 12,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '#js-spots-next',
+    prevEl: '#js-spots-prev',
+  },
+  breakpoints: {
+    900: {
+      spaceBetween: 24,
+    },
   },
 });
 

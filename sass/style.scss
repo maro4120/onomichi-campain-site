@@ -1611,6 +1611,14 @@ body {
   padding-top: vw(46);
   padding-bottom: vw(46);
   margin-top: vw(-46);
+  background-color: $main-color;
+  overflow: hidden;
+
+  @include mq(lg) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-top: 120px;
+  }
 }
 
 .spots__decoration-pawpads {
@@ -1627,27 +1635,82 @@ body {
 }
 
 .spots__heading {
+  position: relative;
+  font-family: $font-family-ja2;
+  font-size: vw(28);
+  font-weight: 500;
+  color: #fff;
+
+  @include mq(lg) {
+    font-size: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: vw(28);
+    background: url(../img/sp-hoshi-Icon.png) no-repeat center center / contain;
+    transform: translateY(-50%);
+  }
 }
 
 .spots__slider {
-}
+  margin-top: vw(24);
+  overflow: visible;
 
-.swiper-wrapper {
-}
+  .swiper-slide {
+    width: vw(240);
+    height: auto;
 
-.swiper-slide {
+    @include mq(lg) {
+      width: 344px;
+    }
+  }
 }
 
 .spot-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  padding-inline: vw(24);
+  padding-bottom: vw(31);
+  text-align: left;
+  gap: vw(16);
+
+  @include mq(lg) {
+    border-radius: 24px;
+    padding-inline: 32px;
+    padding-bottom: 40px;
+    gap: 24px;
+  }
 }
 
 .spot-card__photo {
+  display: block;
+
+  img {
+    width: 100%;
+    height: vw(180);
+    object-fit: cover;
+  }
 }
 
 .spot-card__name {
+  font-size: vw(16);
+  font-weight: 700;
+  text-align: center;
+
+  @include mq(lg) {
+    font-size: 20px;
+  }
 }
 
 .spot-card__text {
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .spots__inner {

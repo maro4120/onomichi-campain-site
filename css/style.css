@@ -1697,10 +1697,106 @@ body.is-modal-open {
   padding-top: min(46px, 12.2666666667vw);
   padding-bottom: min(46px, 12.2666666667vw);
   margin-top: max(-46px, -12.2666666667vw);
+  background-color: #9ed0e0;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .spots {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-top: 120px;
+  }
 }
 
 .spots__top {
   text-align: center;
+}
+
+.spots__heading {
+  position: relative;
+  font-family: "Kiwi Maru", serif;
+  font-size: min(28px, 7.4666666667vw);
+  font-weight: 500;
+  color: #fff;
+}
+@media screen and (min-width: 900px) {
+  .spots__heading {
+    font-size: 40px;
+  }
+}
+.spots__heading::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: min(28px, 7.4666666667vw);
+  background: url(../img/sp-hoshi-Icon.png) no-repeat center center/contain;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.spots__slider {
+  margin-top: min(24px, 6.4vw);
+  overflow: visible;
+}
+.spots__slider .swiper-slide {
+  width: min(240px, 64vw);
+  height: auto;
+}
+@media screen and (min-width: 900px) {
+  .spots__slider .swiper-slide {
+    width: 344px;
+  }
+}
+
+.spot-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  padding-inline: min(24px, 6.4vw);
+  padding-bottom: min(31px, 8.2666666667vw);
+  text-align: left;
+  gap: min(16px, 4.2666666667vw);
+}
+@media screen and (min-width: 900px) {
+  .spot-card {
+    border-radius: 24px;
+    padding-inline: 32px;
+    padding-bottom: 40px;
+    gap: 24px;
+  }
+}
+
+.spot-card__photo {
+  display: block;
+}
+.spot-card__photo img {
+  width: 100%;
+  height: min(180px, 48vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.spot-card__name {
+  font-size: min(16px, 4.2666666667vw);
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .spot-card__name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .spot-card__text {
+    font-size: 16px;
+  }
 }
 
 .page-top {
