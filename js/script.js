@@ -53,3 +53,51 @@ document.querySelectorAll(".prize-modal").forEach((modal) => {
   });
 });
 
+const swiper = new Swiper
+("#js-spots-swiper", {
+  // Optional parameters
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+jQuery('a[href^="#"]').on("click", function (e) {
+  const speed = 300;
+  const id = jQuery(this).attr("href");
+  const target = jQuery("#" == id ? "html" : id);
+  const position = jQuery(target).offset().top;
+  jQuery("html, body").animate(
+    {
+      scrollTop: position,
+    },
+    speed,
+    "swing", // swing or linear
+  );
+});
+
+jQuery(window).on("scroll", function () {
+  if (300 < jQuery(window).scrollTop()) {
+    jQuery("#js-page-top").addClass("is-show");
+  } else {
+    jQuery("#js-page-top").removeClass("is-show");
+  }
+});
+
+const intersectionObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-in-view");
+    } else {
+      // entry.target.classList.remove("is-in-view");
+    }
+  });
+});
+
+const inViewItems = document.querySelectorAll(".js-in-view");
+inViewItems.forEach(function (inViewItem) {
+  intersectionObserver.observe(inViewItem);
+});

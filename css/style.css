@@ -1698,3 +1698,39 @@ body.is-modal-open {
   padding-bottom: min(46px, 12.2666666667vw);
   margin-top: max(-46px, -12.2666666667vw);
 }
+
+.spots__top {
+  text-align: center;
+}
+
+.page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+@media screen and (min-width: 900px) {
+  .page-top {
+    right: 40px;
+    bottom: 40px;
+    z-index: 10;
+  }
+  .page-top.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 900px) {
+  .page-top img {
+    width: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-top img {
+    width: 100px;
+  }
+}

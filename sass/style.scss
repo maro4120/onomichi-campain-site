@@ -1614,97 +1614,107 @@ body {
 }
 
 .spots__decoration-pawpads {
-
 }
 
 .spots__outer {
-
 }
 
 .spots__top {
-
+  text-align: center;
 }
 
 .spots__heading-wrap {
-
 }
 
 .spots__heading {
-
 }
 
 .spots__slider {
-
 }
 
 .swiper-wrapper {
-
 }
 
 .swiper-slide {
-
 }
 
 .spot-card {
-
 }
 
 .spot-card__photo {
-
 }
 
 .spot-card__name {
-
 }
 
 .spot-card__text {
-
 }
 
 .spots__inner {
-
 }
 
 .spots__arrows {
-
 }
 
 .spots-swiper-arrows {
-
 }
 
 .swiper-button-prev {
-
 }
 
 .spots-swiper-arrows__prev {
-
 }
 
 .swiper-button-next {
-
 }
 
 .spots-swiper-arrows__next {
-
 }
 
 .spots__bottom {
-
 }
 
 .spots__decoration-english {
-
 }
 
 .spots__text-wrap {
-
 }
 
 .spots__text {
-
 }
 
 .spots__button {
+}
 
+.page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+
+  @include mq(lg) {
+    right: 40px;
+    bottom: 40px;
+    z-index: 10;
+
+    &.is-show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  img {
+    @include mq(lg) {
+      width: 80px;
+    }
+
+    @include mq(xl) {
+      width: 100px;
+    }
+  }
 }

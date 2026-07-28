@@ -106,6 +106,7 @@
         </div>
       </nav>
     </div>
+
     <section class="fv">
       <picture class="fv__bg-image">
         <source media="(min-width: 600px)" srcset="./img/fv.png" />
@@ -194,7 +195,7 @@
           <div class="heading">
             <img class="heading__icon" src="./img/about-megaphone.svg" alt="" />
             <p class="heading__en">About</p>
-            <h2 class="heading__ja">キャンペーンについて</h2>
+            <h2 class="heading__ja js-in-view">キャンペーンについて</h2>
           </div>
           <div class="about__body">
             <p class="about__lead hidden-lg">
@@ -281,7 +282,7 @@
         <div class="heading">
           <img class="heading__icon" src="./img/how-icon.svg" alt="" />
           <p class="heading__en">How to Enter</p>
-          <h2 class="heading__ja">応募の仕方</h2>
+          <h2 class="heading__ja js-in-view">応募の仕方</h2>
         </div>
         <div class="how-to-enter__steps">
           <div class="step">
@@ -360,7 +361,7 @@
           <div class="heading prizes-heading">
             <img class="heading__icon" src="./img/pr-icon.svg" alt="" />
             <p class="heading__en">Prizes</p>
-            <h2 class="heading__ja">キャンペーン特典</h2>
+            <h2 class="heading__ja js-in-view">キャンペーン特典</h2>
           </div>
           <p class="prizes__lead">
             キャンペーンにご参加いただたい方の中から100名様に、尾道で人気のお土産セットやオリジナルグッズをプレゼント！
@@ -576,7 +577,7 @@
       <div class="spots__outer">
         <div class="spots__top">
           <div class="spots__heading-wrap">
-            <h2 class="spots__heading">おすすめスポット</h2>
+            <h2 class="spots__heading js-in-view">おすすめスポット</h2>
           </div>
           <div id="js-spots-swiper" class="spots__slider swiper">
             <div class="swiper-wrapper">
@@ -653,16 +654,20 @@
             </div>
           </div>
       </div>
-    </section>
+    </section> 
 
     <section class="qa"></section>
     <section class="information"></section>
     <section class="contact"></section>
     <footer class="footer"></footer>
+
+    <a href="#" class="page-top" id="js-page-top"><img src="./img/pagetop.png" alt="" /></a>
+
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
