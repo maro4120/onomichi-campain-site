@@ -1692,3 +1692,9 @@ body.is-modal-open {
   height: auto;
   vertical-align: middle;
 }
+
+.spots {
+  padding-top: min(46px, 12.2666666667vw);
+  padding-bottom: min(46px, 12.2666666667vw);
+  margin-top: max(-46px, -12.2666666667vw);
+}
