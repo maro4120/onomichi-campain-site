@@ -1702,6 +1702,8 @@ body {
 .spots__slider {
   margin-top: vw(24);
   overflow: visible;
+  min-width: 0;
+  flex: 1;
 
   .swiper-slide {
     width: vw(240);
