@@ -1694,18 +1694,35 @@ body.is-modal-open {
 }
 
 .spots {
-  padding-top: min(46px, 12.2666666667vw);
-  padding-bottom: min(46px, 12.2666666667vw);
-  margin-top: max(-46px, -12.2666666667vw);
+  position: relative;
+  padding-bottom: min(4px, 1.0666666667vw);
   background-color: #67b0c7;
-  overflow: hidden;
+}
+.spots::before, .spots::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: min(46px, 12.2666666667vw);
+  background: url(../img/pr-bg_wave.svg) repeat-x top left/auto 100%;
+  pointer-events: none;
 }
 @media screen and (min-width: 900px) {
-  .spots {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    margin-top: 120px;
+  .spots::before, .spots::after {
+    height: 120px;
   }
+}
+.spots::before {
+  bottom: 100%;
+}
+.spots::after {
+  top: 100%;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.spots__outer {
+  overflow: hidden;
 }
 
 .spots__top {

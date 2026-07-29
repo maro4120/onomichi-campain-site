@@ -1608,16 +1608,32 @@ body {
 }
 
 .spots {
-  padding-top: vw(46);
-  padding-bottom: vw(46);
-  margin-top: vw(-46);
+  position: relative;
+  padding-bottom: vw(4);
   background-color: $color-key1;
-  overflow: hidden;
 
-  @include mq(lg) {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    margin-top: 120px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: vw(46);
+    background: url(../img/pr-bg_wave.svg) repeat-x top left / auto 100%;
+    pointer-events: none;
+
+    @include mq(lg) {
+      height: 120px;
+    }
+  }
+
+  &::before {
+    bottom: 100%;
+  }
+
+  &::after {
+    top: 100%;
+    transform: scaleY(-1);
   }
 }
 
@@ -1625,6 +1641,7 @@ body {
 }
 
 .spots__outer {
+  overflow: hidden;
 }
 
 .spots__top {
