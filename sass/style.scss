@@ -1638,6 +1638,10 @@ body {
 }
 
 .spots__decoration-pawpads {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
 }
 
 .spots__outer {
@@ -1645,21 +1649,24 @@ body {
 }
 
 .spots__top {
-  text-align: center;
+  @include mq(lg) {
+    display: flex;
+    column-gap: 32px;
+    padding-left: max(30px, 50% - 512px);
+  }
 }
 
 .spots__heading-wrap {
+  text-align: center;
+
   @include mq(lg) {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 56px;
   }
 }
 
 .spots__heading {
   position: relative;
   display: inline-block;
-  padding-left: vw(36);
   font-family: $font-family-ja2;
   font-size: vw(28);
   font-weight: 500;
@@ -1754,15 +1761,20 @@ body {
 }
 
 .spots__inner {
+  max-width: 1084px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .spots__arrows {
   position: relative;
-  margin-inline: auto;
+  z-index: 2;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 
-  @include mq(lg) {
-    max-width: 700px;
-  }
   @include mq(xl) {
     max-width: 944px;
   }
@@ -1798,7 +1810,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #FFEE56;
+    background-color: #ffee56;
     margin-top: 0;
     top: auto;
   }
