@@ -1849,6 +1849,17 @@ body.is-modal-open {
 
 .spots__arrows {
   position: relative;
+  margin-inline: auto;
+}
+@media screen and (min-width: 900px) {
+  .spots__arrows {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .spots__arrows {
+    max-width: 944px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -1858,6 +1869,12 @@ body.is-modal-open {
     left: 0;
     width: 100%;
     z-index: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 

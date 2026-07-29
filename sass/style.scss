@@ -1758,6 +1758,14 @@ body {
 
 .spots__arrows {
   position: relative;
+  margin-inline: auto;
+
+  @include mq(lg) {
+    max-width: 700px;
+  }
+  @include mq(xl) {
+    max-width: 944px;
+  }
 }
 
 .spots-swiper-arrows {
@@ -1767,6 +1775,8 @@ body {
     left: 0;
     width: 100%;
     z-index: 5;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
