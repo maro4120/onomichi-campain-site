@@ -1649,6 +1649,11 @@ body {
 }
 
 .spots__heading-wrap {
+  @include mq(lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .spots__heading {
@@ -1658,9 +1663,12 @@ body {
   font-family: $font-family-ja2;
   font-size: vw(28);
   font-weight: 500;
+  line-height: vw(125);
+  letter-spacing: 0.25em;
   color: #fff;
 
   @include mq(lg) {
+    writing-mode: vertical-rl;
     font-size: 40px;
   }
 
@@ -1673,6 +1681,14 @@ body {
     height: vw(28);
     background: url(../img/sp-hoshi-Icon.png) no-repeat center center / contain;
     transform: translateY(-50%);
+
+    @include mq(lg) {
+      top: vw(-40);
+      left: 50%;
+      writing-mode: horizontal-tb;
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -1741,21 +1757,72 @@ body {
 }
 
 .spots__arrows {
+  position: relative;
 }
 
 .spots-swiper-arrows {
+  @include mq(lg) {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
 }
 
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  margin-top: 0;
+  width: auto;
+  height: auto;
+}
+
+.spots-swiper-arrows__prev,
+.spots-swiper-arrows__next {
+  &::after {
+    display: none;
+  }
+
+  @include mq(lg) {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FFEE56;
+    margin-top: 0;
+    top: auto;
+  }
 }
 
 .spots-swiper-arrows__prev {
-}
-
-.swiper-button-next {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 27px;
+    background: url(../img/sp-arrow-l.png) no-repeat center center / contain;
+  }
 }
 
 .spots-swiper-arrows__next {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 27px;
+    background: url(../img/sp-arrow-r.png) no-repeat center center / contain;
+  }
+}
+
+.swiper-button-next {
 }
 
 .spots__bottom {

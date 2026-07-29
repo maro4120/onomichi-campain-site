@@ -1729,6 +1729,14 @@ body.is-modal-open {
   text-align: center;
 }
 
+@media screen and (min-width: 900px) {
+  .spots__heading-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 .spots__heading {
   position: relative;
   display: inline-block;
@@ -1736,10 +1744,15 @@ body.is-modal-open {
   font-family: "Kiwi Maru", serif;
   font-size: min(28px, 7.4666666667vw);
   font-weight: 500;
+  line-height: min(125px, 33.3333333333vw);
+  letter-spacing: 0.25em;
   color: #fff;
 }
 @media screen and (min-width: 900px) {
   .spots__heading {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     font-size: 40px;
   }
 }
@@ -1753,6 +1766,17 @@ body.is-modal-open {
   background: url(../img/sp-hoshi-Icon.png) no-repeat center center/contain;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media screen and (min-width: 900px) {
+  .spots__heading::before {
+    top: max(-40px, -10.6666666667vw);
+    left: 50%;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .spots__slider {
@@ -1821,6 +1845,74 @@ body.is-modal-open {
   .spot-card__text {
     font-size: 16px;
   }
+}
+
+.spots__arrows {
+  position: relative;
+}
+
+@media screen and (min-width: 900px) {
+  .spots-swiper-arrows {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  margin-top: 0;
+  width: auto;
+  height: auto;
+}
+
+.spots-swiper-arrows__prev::after,
+.spots-swiper-arrows__next::after {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .spots-swiper-arrows__prev,
+  .spots-swiper-arrows__next {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FFEE56;
+    margin-top: 0;
+    top: auto;
+  }
+}
+
+.spots-swiper-arrows__prev {
+  position: relative;
+}
+.spots-swiper-arrows__prev::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 16px;
+  height: 27px;
+  background: url(../img/sp-arrow-l.png) no-repeat center center/contain;
+}
+
+.spots-swiper-arrows__next {
+  position: relative;
+}
+.spots-swiper-arrows__next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 16px;
+  height: 27px;
+  background: url(../img/sp-arrow-r.png) no-repeat center center/contain;
 }
 
 .spots__bottom {
