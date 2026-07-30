@@ -1673,10 +1673,14 @@ body {
   line-height: vw(125);
   letter-spacing: 0.25em;
   color: #fff;
+  padding-left: vw(36);
 
   @include mq(lg) {
     writing-mode: vertical-rl;
     font-size: 40px;
+    line-height: 1;
+    padding-left: 0;
+    padding-top: 56px;
   }
 
   &::before {
@@ -1690,11 +1694,12 @@ body {
     transform: translateY(-50%);
 
     @include mq(lg) {
-      top: vw(-40);
+      top: 0;
       left: 50%;
       writing-mode: horizontal-tb;
       width: 40px;
       height: 40px;
+      transform: translateX(-50%);
     }
   }
 }
@@ -1704,6 +1709,10 @@ body {
   overflow: visible;
   min-width: 0;
   flex: 1;
+
+  @include mq(lg) {
+    margin-top: 0;
+  }
 
   .swiper-slide {
     width: vw(240);
@@ -1736,13 +1745,21 @@ body {
 
 .spot-card__photo {
   display: block;
-  width: calc(100% + 24px * 2);
-  margin-left: -24px;
+  width: auto;
+  margin-inline: vw(-24);
+
+  @include mq(lg) {
+    margin-inline: -32px;
+  }
 
   img {
     width: 100%;
     height: vw(180);
     object-fit: cover;
+
+    @include mq(lg) {
+      height: 240px;
+    }
   }
 }
 
@@ -1764,8 +1781,8 @@ body {
 
 .spots__inner {
   max-width: 1084px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 27px;
+  padding-left: 27px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1785,7 +1802,7 @@ body {
 .spots-swiper-arrows {
   @include mq(lg) {
     position: absolute;
-    bottom: -25px;
+    bottom: 40px;
     left: 0;
     width: 100%;
     z-index: 5;
@@ -1850,16 +1867,48 @@ body {
 }
 
 .spots__bottom {
+  position: relative;
   text-align: center;
+
+  @include mq(lg) {
+    margin-top: 64px;
+  }
 }
 
 .spots__decoration-english {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  width: vw(255);
+  transform: translate(-50%);
+
+  @include mq(lg) {
+    width: 495px;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .spots__text-wrap {
+  position: relative;
+  z-index: 1;
+  padding-top: vw(71);
+
+  @include mq(lg) {
+    padding-top: 88px;
+  }
 }
 
 .spots__text {
+  color: #fff;
+  font-size: vw(11.44);
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .spots__button {
