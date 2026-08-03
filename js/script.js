@@ -106,3 +106,10 @@ const inViewItems = document.querySelectorAll(".js-in-view");
 inViewItems.forEach(function (inViewItem) {
   intersectionObserver.observe(inViewItem);
 });
+
+jQuery(".js-accordion-trigger").on("click", function () {
+  const $trigger = jQuery(this);
+  const isOpen = $trigger.toggleClass("is-open").hasClass("is-open");
+  $trigger.attr("aria-expanded", isOpen);
+  $trigger.next(".js-accordion-body").stop(true, true).slideToggle(300);
+});
