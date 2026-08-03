@@ -1998,9 +1998,10 @@ body.is-modal-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1024px;
   }
 }
 
@@ -2034,6 +2035,7 @@ body.is-modal-open {
   .spots__text-wrap {
     width: 495px;
     padding-top: 0;
+    text-align: end;
   }
 }
 
