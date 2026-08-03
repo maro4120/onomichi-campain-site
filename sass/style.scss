@@ -1712,6 +1712,7 @@ body {
 
   @include mq(lg) {
     margin-top: 0;
+    overflow: hidden;
   }
 
   .swiper-slide {

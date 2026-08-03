@@ -1811,6 +1811,7 @@ body.is-modal-open {
 @media screen and (min-width: 900px) {
   .spots__slider {
     margin-top: 0;
+    overflow: hidden;
   }
 }
 .spots__slider .swiper-slide {
