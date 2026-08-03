@@ -1912,7 +1912,7 @@ body.is-modal-open {
 @media screen and (min-width: 900px) {
   .spots-swiper-arrows {
     position: absolute;
-    bottom: 40px;
+    bottom: -45px;
     left: 0;
     width: 100%;
     z-index: 5;
@@ -1922,6 +1922,12 @@ body.is-modal-open {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .spots-swiper-arrows {
+    bottom: 40px;
+    left: -10px;
   }
 }
 

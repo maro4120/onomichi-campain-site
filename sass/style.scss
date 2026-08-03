@@ -1803,12 +1803,17 @@ body {
 .spots-swiper-arrows {
   @include mq(lg) {
     position: absolute;
-    bottom: 40px;
+    bottom: -45px;
     left: 0;
     width: 100%;
     z-index: 5;
     display: flex;
     justify-content: space-between;
+  }
+
+  @include mq(xl) {
+    bottom: 40px;
+    left: -10px;
   }
 }
 
