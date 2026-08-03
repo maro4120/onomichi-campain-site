@@ -57,6 +57,7 @@ const swiper = new Swiper("#js-spots-swiper", {
   loop: true,
   slidesPerView: "auto",
   spaceBetween: 12,
+  centeredSlides: true,
   navigation: {
     nextEl: '#js-spots-next',
     prevEl: '#js-spots-prev',
@@ -64,6 +65,7 @@ const swiper = new Swiper("#js-spots-swiper", {
   breakpoints: {
     900: {
       spaceBetween: 24,
+      centeredSlides: false,
     },
   },
 });
