@@ -2088,12 +2088,13 @@ body.is-modal-open {
 }
 
 .qa {
+  margin-top: min(46px, 12.2666666667vw);
   padding-block: min(40px, 10.6666666667vw);
 }
 @media screen and (min-width: 900px) {
   .qa {
-    padding-top: 120px;
-    padding-bottom: 0;
+    margin-top: 120px;
+    padding-block: 120px;
   }
 }
 
@@ -2190,6 +2191,9 @@ body.is-modal-open {
 .qa-item__answer {
   display: none;
   background-color: #f5f5f5;
+}
+.qa-item__default-open .qa-item__answer {
+  display: block;
 }
 
 .qa-item__answer-inner {

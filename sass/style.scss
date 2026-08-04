@@ -1962,11 +1962,12 @@ body {
 }
 
 .qa {
+  margin-top: vw(46);
   padding-block: vw(40);
 
   @include mq(lg) {
-    padding-top: 120px;
-    padding-bottom: 0;
+    margin-top: 120px;
+    padding-block: 120px;
   }
 }
 
@@ -2057,6 +2058,10 @@ body {
 .qa-item__answer {
   display: none;
   background-color: #f5f5f5;
+
+  .qa-item__default-open & {
+    display: block;
+  }
 }
 
 .qa-item__answer-inner {
