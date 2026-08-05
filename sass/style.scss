@@ -1572,11 +1572,20 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
+
+  @include mq(lg) {
+    width: 480px;
+    height: 650px;
+  }
 }
 
 .prize-modal__photo {
   width: 100%;
   height: vw(210);
+
+  @include mq(lg) {
+    height: 300px;
+  }
 
   img {
     width: 100%;
