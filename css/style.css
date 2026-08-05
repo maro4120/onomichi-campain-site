@@ -1423,6 +1423,12 @@ body.is-modal-open {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  outline: 4px solid transparent;
+  outline-offset: -4px;
+  transition: outline-color 0.3s;
+}
+.prize-card__button:hover {
+  outline-color: #9ed0e0;
 }
 @media screen and (min-width: 900px) {
   .prize-card__button {
@@ -1431,7 +1437,7 @@ body.is-modal-open {
 }
 
 .prize-card__button:hover .prize-card__photo img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .prize-card__badge {
@@ -1469,7 +1475,27 @@ body.is-modal-open {
   text-align: center;
   font-weight: 700;
   color: #4a3636;
-  background: url(../img/pr-Rectangle.svg) no-repeat right bottom/min(36px, 9.6vw) auto, #f5f5f5;
+  background: #f5f5f5;
+}
+.prize-card__name::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(36px, 9.6vw);
+  height: min(36px, 9.6vw);
+  background-color: .prize-card__name::after #9ed0e0;
+  mask: url(../img/pr-Rectangle.svg) no-repeat right bottom/100% auto;
+  transition: background-color 0.3s;
+}
+@media screen and (min-width: 900px) {
+  .prize-card__name::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+.prize-card__name .prize-card__button:hover .prize-card__name::after {
+  background-color: #9ed0e0;
 }
 @media screen and (min-width: 600px) {
   .prize-card__name {

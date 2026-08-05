@@ -1445,6 +1445,13 @@ body {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  outline: 4px solid transparent;
+  outline-offset: -4px;
+  transition: outline-color 0.3s;
+
+  &:hover {
+    outline-color: $main-color;
+  }
 
   @include mq(lg) {
     border-radius: 24px;
@@ -1452,7 +1459,7 @@ body {
 }
 
 .prize-card__button:hover .prize-card__photo img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .js-modal-open {
@@ -1493,9 +1500,28 @@ body {
   text-align: center;
   font-weight: 700;
   color: $text-color;
-  background:
-    url(../img/pr-Rectangle.svg) no-repeat right bottom / vw(36) auto,
-    #f5f5f5;
+  background: #f5f5f5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: vw(36);
+    height: vw(36);
+    background-color: &$main-color;
+    mask: url(../img/pr-Rectangle.svg) no-repeat right bottom / 100% auto;
+    transition: background-color 0.3s;
+
+    @include mq(lg) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .prize-card__button:hover .prize-card__name::after {
+    background-color: $main-color;
+  }
 
   @include mq(md) {
     font-size: 14px;

@@ -71,17 +71,19 @@ const swiper = new Swiper("#js-spots-swiper", {
 });
 
 jQuery('a[href^="#"]').on("click", function (e) {
-  const speed = 300;
   const id = jQuery(this).attr("href");
-  const target = jQuery("#" == id ? "html" : id);
-  const position = jQuery(target).offset().top;
-  jQuery("html, body").animate(
-    {
-      scrollTop: position,
-    },
-    speed,
-    "swing", // swing or linear
-  );
+  let target;
+
+  if (id === "#") {
+    target = jQuery("html");
+  } else {
+    const el = document.getElementById(id.slice(1));
+    if (!el) return;
+    target = jQuery(el);
+  }
+
+  e.preventDefault();
+  jQuery("html, body").animate({ scrollTop: target.offset().top }, 300, "swing");
 });
 
 jQuery(window).on("scroll", function () {
