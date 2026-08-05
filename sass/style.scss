@@ -2085,6 +2085,10 @@ body {
 
 .qa-item__text {
   font-size: vw(14);
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .js-accordion-trigger.is-open .qa-item__icon::after {
@@ -2119,6 +2123,17 @@ body {
   }
 }
 
+.info__row {
+  padding-top: vw(12);
+  border-bottom: 1px solid #ccc;
+
+  @include mq(lg) {
+    display: flex;
+    padding-block: 12px;
+    margin-left: 16px;
+  }
+}
+
 .info__term {
   font-size: vw(14);
   font-weight: 700;
@@ -2137,15 +2152,23 @@ body {
     border-radius: 50%;
   }
 
-  & + & {
-    padding-top: vw(12);
+  @include mq(lg) {
+    flex-shrink: 0;
+    width: 240px;
+    padding-left: 20px;
+    font-size: 16px;
   }
 }
 
 .info__desc {
   margin-top: vw(8);
   padding-bottom: vw(16);
-  border-bottom: 1px solid #ccc;
+
+  @include mq(lg) {
+    flex: 1;
+    margin-top: 0;
+    font-size: 16px;
+  }
 }
 
 .info__notes {
