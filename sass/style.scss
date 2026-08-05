@@ -2145,9 +2145,7 @@ body {
   &:last-child {
     border-bottom: none;
   }
-
 }
-
 
 .info__term {
   font-size: vw(14);
@@ -2166,7 +2164,7 @@ body {
     border-radius: 50%;
 
     @include mq(lg) {
-      top: 13px;
+      top: 9px;
     }
   }
 
@@ -2181,6 +2179,14 @@ body {
 .info__desc {
   margin-top: vw(8);
   padding-bottom: vw(16);
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   @include mq(lg) {
     flex: 1;
