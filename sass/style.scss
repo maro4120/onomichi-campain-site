@@ -1963,11 +1963,11 @@ body {
 
 .qa {
   margin-top: vw(46);
-  padding-block: vw(40);
+  padding-top: vw(40);
 
   @include mq(lg) {
     margin-top: 120px;
-    padding-block: 120px;
+    padding-top: 120px;
   }
 }
 
@@ -2096,6 +2096,11 @@ body {
 }
 
 .info {
+  padding-top: vw(40);
+
+  @include mq(lg) {
+    padding-top: 120px;
+  }
 }
 
 .info__inner {
@@ -2107,6 +2112,10 @@ body {
   padding-inline: vw(15.5);
   padding-bottom: vw(40);
   background: rgba(255, 255, 255, 0.5);
+
+  @include mq(lg) {
+    padding: 40px 56px;
+  }
 }
 
 .info__heading {
@@ -2132,7 +2141,13 @@ body {
     padding-block: 12px;
     margin-left: 16px;
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
 }
+
 
 .info__term {
   font-size: vw(14);
