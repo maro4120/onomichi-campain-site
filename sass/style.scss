@@ -2143,13 +2143,16 @@ body {
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: vw(8);
     left: 0;
-    transform: translateY(-50%);
     width: vw(8);
     height: vw(8);
     background-color: $main-color;
     border-radius: 50%;
+
+    @include mq(lg) {
+      top: 13px;
+    }
   }
 
   @include mq(lg) {

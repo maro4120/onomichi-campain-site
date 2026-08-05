@@ -2280,14 +2280,17 @@ body.is-modal-open {
 .info__term::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: min(8px, 2.1333333333vw);
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: min(8px, 2.1333333333vw);
   height: min(8px, 2.1333333333vw);
   background-color: #9ed0e0;
   border-radius: 50%;
+}
+@media screen and (min-width: 900px) {
+  .info__term::before {
+    top: 13px;
+  }
 }
 @media screen and (min-width: 900px) {
   .info__term {
