@@ -1446,7 +1446,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   outline: 4px solid transparent;
-  outline-offset: -4px;
+  outline-offset: -2px;
   transition: outline-color 0.3s;
 
   &:hover {
@@ -1493,6 +1493,7 @@ body {
 }
 
 .prize-card__name {
+  position: relative;
   height: vw(56);
   display: flex;
   align-items: center;
@@ -1509,7 +1510,7 @@ body {
     bottom: 0;
     width: vw(36);
     height: vw(36);
-    background-color: &$main-color;
+    background-color: $color-key1;
     mask: url(../img/pr-Rectangle.svg) no-repeat right bottom / 100% auto;
     transition: background-color 0.3s;
 
@@ -1519,10 +1520,6 @@ body {
     }
   }
 
-  .prize-card__button:hover .prize-card__name::after {
-    background-color: $main-color;
-  }
-
   @include mq(md) {
     font-size: 14px;
   }
@@ -1530,10 +1527,11 @@ body {
   @include mq(lg) {
     min-height: 120px;
     font-size: 20px;
-    background:
-      url(../img/pr-Rectangle.svg) no-repeat right bottom / 100px auto,
-      #f5f5f5;
   }
+}
+
+.prize-card__button:hover .prize-card__name::after {
+  background-color: $main-color;
 }
 
 .prize-card__zoom {

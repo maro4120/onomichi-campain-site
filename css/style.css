@@ -1424,7 +1424,7 @@ body.is-modal-open {
   border-radius: 8px;
   overflow: hidden;
   outline: 4px solid transparent;
-  outline-offset: -4px;
+  outline-offset: -2px;
   transition: outline-color 0.3s;
 }
 .prize-card__button:hover {
@@ -1468,6 +1468,7 @@ body.is-modal-open {
 }
 
 .prize-card__name {
+  position: relative;
   height: min(56px, 14.9333333333vw);
   display: flex;
   align-items: center;
@@ -1484,7 +1485,7 @@ body.is-modal-open {
   bottom: 0;
   width: min(36px, 9.6vw);
   height: min(36px, 9.6vw);
-  background-color: .prize-card__name::after #9ed0e0;
+  background-color: #67b0c7;
   mask: url(../img/pr-Rectangle.svg) no-repeat right bottom/100% auto;
   transition: background-color 0.3s;
 }
@@ -1493,9 +1494,6 @@ body.is-modal-open {
     width: 100px;
     height: 100px;
   }
-}
-.prize-card__name .prize-card__button:hover .prize-card__name::after {
-  background-color: #9ed0e0;
 }
 @media screen and (min-width: 600px) {
   .prize-card__name {
@@ -1506,8 +1504,11 @@ body.is-modal-open {
   .prize-card__name {
     min-height: 120px;
     font-size: 20px;
-    background: url(../img/pr-Rectangle.svg) no-repeat right bottom/100px auto, #f5f5f5;
   }
+}
+
+.prize-card__button:hover .prize-card__name::after {
+  background-color: #9ed0e0;
 }
 
 .prize-card__zoom {
