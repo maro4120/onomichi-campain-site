@@ -2634,11 +2634,12 @@ body.is-modal-open {
   background: #f0f0f0;
   border-radius: 50%;
   cursor: pointer;
+  margin: 0;
 }
-.contact-radio:checked {
-  background-image: radial-gradient(#9ed0e0 0 12px);
+.contact-radio input[type=radio]:checked {
+  background-image: radial-gradient(#9ed0e0 0 6px, transparent 6px);
 }
-.contact-radio:focus-visible {
+.contact-radio input[type=radio]:focus-visible {
   outline: 2px solid #9ed0e0;
   outline-offset: 2px;
 }

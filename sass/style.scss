@@ -2443,15 +2443,16 @@ $form-error-bg: #fdeff5;
     background: #f0f0f0;
     border-radius: 50%;
     cursor: pointer;
-  }
+    margin: 0;
+  
+    &:checked {
+    background-image: radial-gradient($main-color 0 6px, transparent 6px);
+    }
 
-  &:checked {
-    background-image: radial-gradient($main-color 0 12px);
-  }
-
-  &:focus-visible {
+    &:focus-visible {
     outline: 2px solid $main-color;
     outline-offset: 2px;
+    }
   }
 
   input[type="radio"]:checked + .contact-radio__text {
