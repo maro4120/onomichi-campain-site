@@ -2725,3 +2725,10 @@ body.is-modal-open {
     margin-top: 40px;
   }
 }
+
+.footer__main {
+  position: relative;
+  padding-top: min(40px, 10.6666666667vw);
+  padding-bottom: min(46px, 12.2666666667vw);
+  background: #e9f6f8;
+}

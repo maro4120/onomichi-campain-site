@@ -2528,3 +2528,15 @@ $form-error-bg: #fdeff5;
     margin-top: 40px;
   }
 }
+
+.footer__main {
+  position: relative;
+  padding-top: vw(40);
+  padding-bottom: vw(46);
+  background: $color-key3;
+
+  @include mq(lg) {
+    
+  }
+}
+
