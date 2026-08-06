@@ -2242,3 +2242,288 @@ body {
     width: 100%;
   }
 }
+
+$form-bg: #f5f5f5;
+$form-placeholder: #b3b3b3;
+$form-error: #e5006d;
+$form-error-bg: #fdeff5;
+
+.contact {
+  padding-block: vw(40);
+  background: #fff;
+
+  @include mq(lg) {
+    padding-block: 120px;
+  }
+}
+
+.contact__lead {
+  margin-top: vw(24);
+  text-align: center;
+
+  @include mq(lg) {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+}
+
+.contact__form {
+  margin-top: vw(24);
+
+  @include mq(lg) {
+    margin-top: 40px;
+    max-width: 848px;
+    margin-inline: auto;
+  }
+}
+
+.contact-form__row {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  & + & {
+    margin-top: vw(24);
+  }
+
+  @include mq(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contact-form__head {
+  display: flex;
+  align-items: center;
+  gap: vw(12);
+
+  @include mq(lg) {
+    flex-shrink: 0;
+    width: 252px;
+  }
+}
+
+.contact-form__label {
+  font-size: vw(14);
+  font-weight: 700;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+
+  .is-error & {
+    color: $form-error;
+  }
+}
+
+.contact-form__required {
+  padding: vw(4) vw(8);
+  color: #fff;
+  font-weight: 700;
+  background-color: $form-error;
+  border-radius: 4px;
+}
+
+.contact-form__field {
+  margin-top: vw(8);
+
+  @include mq(lg) {
+    flex: 1;
+    min-width: 0;
+    margin-top: 0;
+  }
+}
+
+.contact-form__input,
+.contact-form__textarea,
+.contact-form__select-box {
+  width: 100%;
+  padding: vw(16);
+  font-family: inherit;
+  font-size: vw(14);
+  color: $text-color;
+  background: $form-bg;
+  border: 1px solid transparent;
+  border-radius: vw(8);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+
+  &::placeholder {
+    color: $form-placeholder;
+  }
+
+  &:focus {
+    outline: none;
+    background: #e9f6f8;
+    border-color: $main-color;
+  }
+
+  .is-error & {
+    background: $form-error-bg;
+    border-color: $form-error;
+  }
+}
+
+.contact-form__input,
+.contact-form__select-box {
+  height: vw(56);
+}
+
+.contact-form__textarea {
+  height: vw(160);
+  padding: vw(16);
+  resize: vertical;
+}
+// セレクト
+.contact-form__select {
+  position: relative;
+  // 未選択プレースホルダー色
+  .contact-form__select-box:invalid {
+    color: $form-placeholder;
+  }
+
+  .contact-form__select-box {
+    appearance: none;
+    padding-right: vw(52);
+    cursor: pointer;
+  }
+  // 右の水色ボックス
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: vw(48);
+    height: calc(100% - 2px);
+    background: #ade0ea;
+    border-radius: 0 4px 4px 0;
+    pointer-events: none;
+  }
+  // 白い山かっこ
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: vw(24);
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(50%, -75%) rotate(45deg);
+    pointer-events: none;
+  }
+
+  .is-error &::before {
+    background: $form-error;
+  }
+}
+
+// radio
+.contact-form__radios {
+  display: flex;
+  align-items: center;
+  gap: vw(24);
+}
+
+.contact-radio {
+  display: flex;
+  align-items: center;
+  gap: vw(8);
+
+  input[type="radio"] {
+    appearance: none;
+    flex-shrink: 0;
+    width: vw(24);
+    height: vw(24);
+    background: #f0f0f0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:checked {
+    background-image: radial-gradient($main-color 0 12px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $main-color;
+    outline-offset: 2px;
+  }
+
+  input[type="radio"]:checked + .contact-radio__text {
+    font-weight: 700;
+  }
+}
+
+.contact-radio__text {
+  font-size: vw(14);
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+// プライバシーポリシー
+.contact-form__row--privacy {
+  display: flex;
+  justify-content: center;
+  margin-top: vw(24);
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
+}
+
+.contact-check {
+  display: flex;
+  align-items: center;
+  gap: vw(12);
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    appearance: none;
+    flex-shrink: 0;
+    width: vw(24);
+    height: vw(24);
+    background: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    &:checked {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%239ed0e0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M3 8.5l3.2 3.3L13 4.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $main-color;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.contact-check__text {
+  font-size: vw(14);
+
+  @include mq(lg) {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.contact-form__submit {
+  margin-top: vw(24);
+  text-align: center;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
+}

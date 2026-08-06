@@ -115,3 +115,54 @@ jQuery(".js-accordion-trigger").on("click", function () {
   $trigger.attr("aria-expanded", isOpen);
   $trigger.next(".js-accordion-body").stop(true, true).slideToggle(300);
 });
+
+const contactForm = document.getElementById("js-contact-form");
+
+if (contactForm) {
+  const fields = contactForm.querySelectorAll("input, select, textarea");
+
+  const validateField = function (field) {
+    const row = field.closest(".contact-form__row");
+    if (!row) return true;
+
+    const isValid = field.checkValidity();
+    row.classList.toggle("is-error",!isValid);
+    field.setAttribute("aria-invalid", String(!isValid));
+    return isValid;
+  };
+
+  fields.forEach(function (field) {
+    field.addEventListener("input", function () {
+      if (field.closest(".contact-form__row")?.classList.contains("is-error")) {
+        validateField(field);
+      }
+    });
+    field.addEventListener("change", function() {
+      validateField(field);
+    });
+  });
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault ();
+
+    let isValid = true;
+    fields.forEach(function (field) {
+      if(!validateField(field)) isValid = false;
+    });
+
+    if (!isValid) {
+      const firstError = contactForm.querySelector(".is-error input, .is-error select, .is-error textarea");
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    alert("送信が完了しました。ありがとうございます！");
+    contactForm.reset();
+    contactForm.querySelectorAll(".is-error").forEach(function (row) {
+      row.classList.remove("is-error");
+      row.querySelectorAll("[arie-invalid]").forEach(function (f){
+        f.removeAttribute("aria-invalid");
+      });
+    });
+  });
+}
