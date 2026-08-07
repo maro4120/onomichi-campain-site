@@ -2833,7 +2833,7 @@ body.is-modal-open {
 }
 @media screen and (min-width: 900px) {
   .footer__logo img {
-    width: min(183px, 48.8vw);
+    width: 183px;
   }
 }
 
@@ -2924,10 +2924,8 @@ body.is-modal-open {
     visibility: visible;
   }
 }
-@media screen and (min-width: 1200px) {
-  .page-top img {
-    width: 100%;
-  }
+.page-top img {
+  width: 100%;
 }
 
 .footer__bottom {
@@ -2948,7 +2946,7 @@ body.is-modal-open {
   bottom: 100%;
   left: 0;
   width: 100%;
-  height: 46px;
+  height: min(46px, 12.2666666667vw);
   background: url(../img/pr-bg_wave.svg) repeat-x bottom left/auto 100%;
   pointer-events: none;
 }

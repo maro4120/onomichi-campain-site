@@ -2617,7 +2617,7 @@ $form-error-bg: #fdeff5;
     width: vw(153);
 
     @include mq(lg) {
-      width: vw(183);
+      width: 183px;
     }
   }
 }
@@ -2707,9 +2707,7 @@ $form-error-bg: #fdeff5;
   }
 
   img {
-    @include mq(xl) {
-      width: 100%;
-    }
+    width: 100%;
   }
 }
 
@@ -2730,7 +2728,7 @@ $form-error-bg: #fdeff5;
     bottom: 100%;
     left: 0;
     width: 100%;
-    height: 46px;
+    height: vw(46);
     background: url(../img/pr-bg_wave.svg) repeat-x bottom left / auto 100%;
     pointer-events: none;
 
