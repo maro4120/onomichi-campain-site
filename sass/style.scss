@@ -2498,12 +2498,17 @@ $form-error-bg: #fdeff5;
 
 .footer__main {
   position: relative;
+  overflow-x: clip;
   padding-top: vw(40);
   background: $color-key3;
 
   @include mq(lg) {
     padding-top: 120px;
   }
+}
+
+.footer__inner {
+  position: relative;
 }
 
 .footer__follow {
@@ -2613,6 +2618,9 @@ $form-error-bg: #fdeff5;
 .footer__logo {
   text-align: center;
 
+  @include mq(lg) {
+    text-align: left;
+  }
   img {
     width: vw(153);
 
@@ -2671,8 +2679,8 @@ $form-error-bg: #fdeff5;
 
 .footer__deco-pawpads {
   position: absolute;
-  top: 80px;
-  right: 80px;
+  top: -40px;
+  right: calc(50% - 676px);
   z-index: 0;
   width: 100px;
 

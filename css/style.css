@@ -2696,6 +2696,7 @@ body.is-modal-open {
 
 .footer__main {
   position: relative;
+  overflow-x: clip;
   padding-top: min(40px, 10.6666666667vw);
   background: #e9f6f8;
 }
@@ -2703,6 +2704,10 @@ body.is-modal-open {
   .footer__main {
     padding-top: 120px;
   }
+}
+
+.footer__inner {
+  position: relative;
 }
 
 .footer__follow {
@@ -2828,6 +2833,11 @@ body.is-modal-open {
 .footer__logo {
   text-align: center;
 }
+@media screen and (min-width: 900px) {
+  .footer__logo {
+    text-align: left;
+  }
+}
 .footer__logo img {
   width: min(153px, 40.8vw);
 }
@@ -2891,8 +2901,8 @@ body.is-modal-open {
 
 .footer__deco-pawpads {
   position: absolute;
-  top: 80px;
-  right: 80px;
+  top: -40px;
+  right: calc(50% - 676px);
   z-index: 0;
   width: 100px;
 }
