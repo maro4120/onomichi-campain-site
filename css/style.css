@@ -450,7 +450,7 @@ body.is-modal-open {
 .fv__smartphone {
   position: absolute;
   left: 50%;
-  z-index: 2;
+  z-index: 1;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: min(200px, 53.3333333333vw);
@@ -465,6 +465,107 @@ body.is-modal-open {
 .fv__smartphone img {
   display: block;
   width: 100%;
+}
+
+.fv__notice {
+  position: absolute;
+  left: 50%;
+  bottom: min(131px, 34.9333333333vw);
+  z-index: 3;
+  width: min(166px, 44.2666666667vw);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  border-radius: min(13px, 3.4666666667vw);
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .fv__notice {
+    bottom: 107px;
+    width: 208px;
+    border-radius: min(16px, 4.2666666667vw);
+  }
+}
+
+.fv__notice-title {
+  padding-block: min(6px, 1.6vw);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(265deg, #ac3790 -3.52%, #d65a5c 44.94%, #f4c06d 92.38%);
+}
+@media screen and (min-width: 900px) {
+  .fv__notice-title {
+    padding-block: 8px;
+    font-size: 16px;
+  }
+}
+
+.fv__notice-body {
+  padding: min(13px, 3.4666666667vw) min(13px, 3.4666666667vw) min(19px, 5.0666666667vw);
+}
+@media screen and (min-width: 900px) {
+  .fv__notice-body {
+    padding: 16px 12px 24px;
+  }
+}
+
+.fv__notice-period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: min(3px, 0.8vw);
+}
+@media screen and (min-width: 900px) {
+  .fv__notice-period {
+    gap: 4px;
+  }
+}
+
+.fv__notice-label {
+  padding-bottom: min(3px, 0.8vw);
+  border-bottom: 2.4px solid var(--LP-Red, #ce2073);
+}
+@media screen and (min-width: 900px) {
+  .fv__notice-label {
+    padding-bottom: 4px;
+    font-size: 14px;
+    border-bottom: 3px solid var(--LP-Red, #ce2073);
+  }
+}
+
+.fv__notice-date {
+  font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  .fv__notice-date {
+    font-size: 16px;
+  }
+}
+
+.fv__notice-button {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: min(13px, 3.4666666667vw) auto 0;
+  font-size: min(14px, 3.7333333333vw);
+}
+@media screen and (min-width: 900px) {
+  .fv__notice-button {
+    padding: 6px 22px 8px;
+    font-size: 16px;
+    margin-top: 22px;
+    height: auto;
+  }
 }
 
 .fv__animal1 {
