@@ -49,6 +49,22 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* OSの「視差効果を減らす」設定を尊重する */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ヘッダーの高さぶん、ジャンプ先に余白を確保する */
+section[id] {
+  scroll-margin-top: $header-height;
+}
+
 @include mq(sm) {
   .hidden-sm {
     display: none !important;
@@ -497,14 +513,14 @@ body {
   @include mq(lg) {
     bottom: 107px;
     width: 208px;
-    border-radius: vw(16);
+    border-radius: 16px;
   }
 }
 
 .fv__notice-title {
   padding-block: vw(6);
   color: #fff;
-  font-size: 13px;
+  font-size: vw(13);
   font-weight: 700;
   text-align: center;
   background: linear-gradient(
@@ -541,12 +557,12 @@ body {
 
 .fv__notice-label {
   padding-bottom: vw(3);
-  border-bottom: 2.4px solid var(--LP-Red, #ce2073);
+  border-bottom: 2.4px solid #ce2073;
 
   @include mq(lg) {
     padding-bottom: 4px;
     font-size: 14px;
-    border-bottom: 3px solid var(--LP-Red, #ce2073);
+    border-bottom: 3px solid #ce2073;
   }
 }
 
@@ -563,12 +579,12 @@ body {
   width: max-content;
   margin: vw(13) auto 0;
   font-size: vw(14);
+  height: auto;
 
   @include mq(lg) {
     padding: 6px 22px 8px;
     font-size: 16px;
     margin-top: 22px;
-    height: auto;
   }
 }
 

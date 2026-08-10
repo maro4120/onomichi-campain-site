@@ -70,22 +70,6 @@ const swiper = new Swiper("#js-spots-swiper", {
   },
 });
 
-jQuery('a[href^="#"]').on("click", function (e) {
-  const id = jQuery(this).attr("href");
-  let target;
-
-  if (id === "#") {
-    target = jQuery("html");
-  } else {
-    const el = document.getElementById(id.slice(1));
-    if (!el) return;
-    target = jQuery(el);
-  }
-
-  e.preventDefault();
-  jQuery("html, body").animate({ scrollTop: target.offset().top }, 300, "swing");
-});
-
 jQuery(window).on("scroll", function () {
   if (300 < jQuery(window).scrollTop()) {
     jQuery("#js-page-top").addClass("is-show");
