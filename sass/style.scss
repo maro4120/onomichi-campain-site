@@ -62,7 +62,7 @@ html {
 
 /* ヘッダーの高さぶん、ジャンプ先に余白を確保する */
 section[id] {
-  scroll-margin-top: $header-height;
+  scroll-margin-top: var(--scroll-offset, #{$header-height});
 }
 
 @include mq(sm) {
@@ -222,6 +222,16 @@ section[id] {
 }
 
 .header__button {
+  .button {
+    @include mq(lg) {
+      display: flex;
+      padding: 6px 24px 8px;
+      height: 36px;
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .header-link {
@@ -431,7 +441,7 @@ section[id] {
   max-width: 142px;
 
   @include mq(lg) {
-    top: 0px;
+    top: -9px;
     left: 37px;
     width: 244px;
     max-width: 100%;
@@ -450,7 +460,7 @@ section[id] {
   max-width: 110px;
 
   @include mq(lg) {
-    top: 17px;
+    top: 8px;
     right: 127px;
     max-width: 100%;
     width: 180px;
@@ -471,9 +481,10 @@ section[id] {
 
   @include mq(lg) {
     bottom: 0;
-    left: 0;
+    left: 6px;
     width: 202px;
     max-width: 202px;
+    height: 332px;
   }
   img {
     width: 100%;
@@ -490,7 +501,7 @@ section[id] {
   bottom: vw(11);
 
   @include mq(lg) {
-    bottom: 17px;
+    bottom: 25px;
     width: 250px;
   }
   img {
@@ -504,21 +515,21 @@ section[id] {
   left: 50%;
   bottom: vw(131);
   z-index: 3;
-  width: vw(166);
+  width: vw(160);
   transform: translateX(-50%);
   background: #fff;
   border-radius: vw(13);
   overflow: hidden;
 
   @include mq(lg) {
-    bottom: 107px;
-    width: 208px;
+    bottom: 160px;
+    width: 202px;
     border-radius: 16px;
   }
 }
 
 .fv__notice-title {
-  padding-block: vw(6);
+  padding-block: vw(5);
   color: #fff;
   font-size: vw(13);
   font-weight: 700;
@@ -537,7 +548,7 @@ section[id] {
 }
 
 .fv__notice-body {
-  padding: vw(13) vw(13) vw(19);
+  padding: vw(12) vw(13) vw(19);
 
   @include mq(lg) {
     padding: 16px 12px 24px;
@@ -548,7 +559,6 @@ section[id] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: vw(3);
 
   @include mq(lg) {
     gap: 4px;
@@ -578,13 +588,14 @@ section[id] {
   display: block;
   width: max-content;
   margin: vw(13) auto 0;
+  padding: vw(3) vw(22) vw(4);
   font-size: vw(14);
   height: auto;
 
   @include mq(lg) {
     padding: 6px 22px 8px;
     font-size: 16px;
-    margin-top: 22px;
+    margin-top: 15px;
   }
 }
 
@@ -597,7 +608,7 @@ section[id] {
   z-index: 3;
 
   @include mq(lg) {
-    bottom: 61px;
+    bottom: 70px;
     right: 63px;
     width: 170px;
     max-width: 170px;
@@ -618,7 +629,7 @@ section[id] {
 
   @include mq(lg) {
     right: 0px;
-    bottom: -44px;
+    bottom: -34px;
     width: 233px;
     max-width: 233px;
   }
@@ -634,7 +645,7 @@ section[id] {
   overflow: hidden;
 
   @include mq(lg) {
-    padding-top: 80px;
+    padding-top: 70px;
   }
 }
 
@@ -682,7 +693,7 @@ section[id] {
 
 .about__deco-ropeway {
   position: absolute;
-  top: vw(390);
+  top: vw(397);
   left: vw(-130);
   width: vw(200);
   z-index: 0;
@@ -706,7 +717,7 @@ section[id] {
 
 .about__deco-stairs {
   position: absolute;
-  top: vw(565);
+  top: vw(562);
   left: calc(50% - 50vw - 55px);
   width: vw(216);
   z-index: 0;
@@ -765,7 +776,7 @@ section[id] {
 
 .about__deco-harbor {
   position: absolute;
-  top: vw(265);
+  top: vw(273);
   right: vw(-130);
   width: vw(200);
   z-index: 0;
@@ -871,8 +882,8 @@ section[id] {
     top: 898px;
   }
   @include mq(lg) {
-    top: 1000px;
-    width: 770px;
+    top: 995px;
+    width: 895px;
   }
 
   img {
@@ -907,8 +918,7 @@ section[id] {
 
 .about__head-photo {
   position: absolute;
-  top: vw(-10);
-  width: vw(80);
+  width: vw(90);
   z-index: 1;
 
   @include mq(lg) {
@@ -918,17 +928,21 @@ section[id] {
 
   &:first-child {
     left: calc(50% - #{vw(135)});
+    top: vw(-8);
 
     @include mq(lg) {
       left: calc(50% - 338px);
+      top: 0;
     }
   }
 
   &:last-child {
     right: calc(50% - #{vw(148)});
+    top: vw(-10);
 
     @include mq(lg) {
       right: calc(50% - 340px);
+      top: 8px;
     }
   }
 }
@@ -944,10 +958,10 @@ section[id] {
   }
 
   p + p {
-    margin-top: vw(21);
+    margin-top: vw(20);
 
     @include mq(lg) {
-      margin-top: 27px;
+      margin-top: 29px;
     }
   }
 
@@ -967,7 +981,7 @@ section[id] {
 }
 
 .about__present {
-  margin-top: vw(32);
+  margin-top: vw(30);
   font-size: vw(14);
   border-bottom: $main-color 2px dashed;
   width: fit-content;
@@ -996,6 +1010,7 @@ section[id] {
 
 .about__slider {
   overflow: hidden;
+  top: -5px;
 
   .swiper-wrapper {
     transition-timing-function: linear !important;
@@ -1019,7 +1034,7 @@ section[id] {
 }
 
 .how-to-enter {
-  margin-top: vw(32);
+  margin-top: vw(28);
   overflow-x: clip;
 
   @include mq(lg) {
@@ -1027,7 +1042,7 @@ section[id] {
   }
 
   @include mq(xl) {
-    margin-top: 60px;
+    margin-top: 56px;
   }
 }
 
@@ -1177,6 +1192,7 @@ section[id] {
 
     @include mq(xl) {
       font-size: 20px;
+      margin-top: 24px;
     }
 
     span {
@@ -1186,7 +1202,7 @@ section[id] {
   }
 
   .step__text {
-    margin-top: vw(16);
+    margin-top: vw(15);
 
     @include mq(md) {
       font-size: 14px;
@@ -1196,9 +1212,12 @@ section[id] {
       font-size: 16px;
     }
 
-    span {
-      font-weight: 700;
-      line-height: 1.6;
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -1240,7 +1259,7 @@ section[id] {
   }
 
   @include mq(xl) {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 
@@ -1330,6 +1349,7 @@ section[id] {
   @include mq(xl) {
     left: calc(50% - 50vw + 36px);
     width: 100px;
+    bottom: 26px;
   }
 }
 
@@ -1398,7 +1418,7 @@ section[id] {
 
   @include mq(lg) {
     max-width: 100%;
-    padding: 30px 30px 49px;
+    padding: 30px 56px 49px;
   }
 
   &::before,
@@ -1425,14 +1445,15 @@ section[id] {
   }
 
   &::after {
-    bottom: 0;
+    bottom: vw(-5);
     left: 0;
     width: 100%;
-    height: calc(100% - 83px);
+    height: calc(100% - 78px);
     border-radius: 24px;
 
     @include mq(lg) {
-      height: calc(100% - 148px);
+      height: calc(100% - 228px);
+      bottom: 80px;
     }
   }
 }
@@ -1484,6 +1505,7 @@ section[id] {
 
   @include mq(lg) {
     font-size: 16px;
+    margin-top: 40px;
   }
 }
 
@@ -1542,6 +1564,18 @@ section[id] {
       height: 240px;
       aspect-ratio: auto;
     }
+    &:nth-of-type(3) .prize-card__button,
+    &:nth-of-type(4) .prize-card__button,
+    &:last-child .prize-card__button {
+      border-radius: 16px;
+      width: 280px;
+      height: 320px;
+    }
+    &:nth-of-type(3) .prize-card__zoom,
+    &:nth-of-type(4) .prize-card__zoom,
+    &:last-child .prize-card__zoom {
+      width: 20px;
+    }
   }
 }
 
@@ -1579,7 +1613,7 @@ section[id] {
   z-index: 2;
 
   @include mq(lg) {
-    top: -40px;
+    top: -50px;
     width: 100px;
   }
 }
@@ -1594,6 +1628,10 @@ section[id] {
     height: auto;
     object-fit: cover;
     transition: transform 0.3s;
+
+    @include mq(lg) {
+      aspect-ratio: 130 / 100;
+    }
   }
 }
 
@@ -1715,7 +1753,7 @@ section[id] {
 }
 
 .prizes__button {
-  margin-top: vw(24);
+  margin-top: vw(17);
   text-align: center;
 
   @include mq(lg) {
@@ -1727,7 +1765,7 @@ section[id] {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -43px;
+  margin-top: -30px;
 
   @include mq(lg) {
     margin-top: 0;
@@ -1749,6 +1787,12 @@ section[id] {
   position: relative;
   padding-bottom: vw(4);
   background-color: $color-key1;
+
+  --scroll-offset: calc(#{$header-height} + #{vw(46)});
+
+  @include mq(lg) {
+    --scroll-offset: calc(#{$header-height} + 120px);
+  }
 
   &::before,
   &::after {
@@ -2803,7 +2847,7 @@ $form-error-bg: #fdeff5;
   @include mq(lg) {
     position: fixed;
     right: 40px;
-    bottom: 40px;
+    top: 840px;
     z-index: 10;
     width: 100px;
     margin-block: 0;
