@@ -1418,7 +1418,7 @@ section[id] {
 
   @include mq(lg) {
     max-width: 100%;
-    padding: 30px 56px 49px;
+    padding: 30px 52px 49px;
   }
 
   &::before,
@@ -1515,10 +1515,17 @@ section[id] {
   gap: vw(15);
   margin-top: vw(48);
 
+  // @include mq(lg) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  //   row-gap: 80px;
+  //   margin-top: 82px;
+  // }
+
   @include mq(lg) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 40px;
     row-gap: 80px;
     margin-top: 82px;
   }
@@ -1539,7 +1546,10 @@ section[id] {
     margin-top: vw(24);
 
     @include mq(lg) {
-      width: calc((100% - 40px) / 3);
+      // width: calc((100% - 40px) / 3);
+      grid-column: span 2;
+      justify-self: stretch;
+      width: auto;
       margin-top: 0;
     }
   }
@@ -1549,33 +1559,47 @@ section[id] {
   position: relative;
 
   @include mq(lg) {
-    &:nth-of-type(1),
-    &:nth-of-type(2) {
-      width: calc(50% - 16px);
-    }
+    grid-column: span 3;
 
-    &:nth-of-type(3),
-    &:nth-of-type(4) {
-      width: calc((100% - 40px) / 3);
-    }
-    &:nth-of-type(3) .prize-card__photo img,
-    &:nth-of-type(4) .prize-card__photo img,
-    &:last-child .prize-card__photo img {
-      height: 240px;
+    .prize-card__photo img {
+      height: 340px;
       aspect-ratio: auto;
     }
-    &:nth-of-type(3) .prize-card__button,
-    &:nth-of-type(4) .prize-card__button,
-    &:last-child .prize-card__button {
-      border-radius: 16px;
-      width: 280px;
-      height: 320px;
+
+    &:nth-child(n + 3){
+      grid-column: span 2;
+
+      .prize-card__photo img {
+        height: 240px;
+      }
     }
-    &:nth-of-type(3) .prize-card__zoom,
-    &:nth-of-type(4) .prize-card__zoom,
-    &:last-child .prize-card__zoom {
-      width: 20px;
-    }
+    // &:nth-of-type(1),
+    // &:nth-of-type(2) {
+    //   width: calc(50% - 16px);
+    // }
+
+    // &:nth-of-type(3),
+    // &:nth-of-type(4) {
+    //   width: calc((100% - 40px) / 3);
+    // }
+    // &:nth-of-type(3) .prize-card__photo img,
+    // &:nth-of-type(4) .prize-card__photo img,
+    // &:last-child .prize-card__photo img {
+    //   height: 240px;
+    //   aspect-ratio: auto;
+    // }
+    // &:nth-of-type(3) .prize-card__button,
+    // &:nth-of-type(4) .prize-card__button,
+    // &:last-child .prize-card__button {
+    //   border-radius: 16px;
+    //   width: 280px;
+    //   height: 320px;
+    // }
+    // &:nth-of-type(3) .prize-card__zoom,
+    // &:nth-of-type(4) .prize-card__zoom,
+    // &:last-child .prize-card__zoom {
+    //   width: 20px;
+    // }
   }
 }
 
