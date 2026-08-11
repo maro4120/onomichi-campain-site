@@ -1492,7 +1492,7 @@ section[id] {
 @media screen and (min-width: 900px) {
   .prizes__contents {
     max-width: 100%;
-    padding: 30px 52px 49px;
+    padding: 30px 54px 49px;
   }
 }
 .prizes__contents::before, .prizes__contents::after {
@@ -1591,9 +1591,9 @@ section[id] {
 @media screen and (min-width: 900px) {
   .prizes__cards {
     grid-template-columns: repeat(6, 1fr);
-    -webkit-column-gap: 40px;
-       -moz-column-gap: 40px;
-            column-gap: 40px;
+    -webkit-column-gap: 34px;
+       -moz-column-gap: 34px;
+            column-gap: 34px;
     row-gap: 80px;
     margin-top: 82px;
   }
@@ -1637,8 +1637,16 @@ section[id] {
   .prize-card:nth-child(n+3) {
     grid-column: span 2;
   }
+  .prize-card:nth-child(n+3) .prize-card__badge {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
   .prize-card:nth-child(n+3) .prize-card__photo img {
     height: 240px;
+  }
+  .prize-card:nth-child(n+3) .prize-card__name {
+    font-size: 16px;
   }
 }
 

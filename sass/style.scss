@@ -1418,7 +1418,7 @@ section[id] {
 
   @include mq(lg) {
     max-width: 100%;
-    padding: 30px 52px 49px;
+    padding: 30px 54px 49px;
   }
 
   &::before,
@@ -1525,7 +1525,7 @@ section[id] {
 
   @include mq(lg) {
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 40px;
+    column-gap: 34px;
     row-gap: 80px;
     margin-top: 82px;
   }
@@ -1566,11 +1566,21 @@ section[id] {
       aspect-ratio: auto;
     }
 
-    &:nth-child(n + 3){
+    &:nth-child(n + 3) {
       grid-column: span 2;
+
+      .prize-card__badge {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+      }
 
       .prize-card__photo img {
         height: 240px;
+      }
+
+      .prize-card__name {
+        font-size: 16px;
       }
     }
     // &:nth-of-type(1),
