@@ -1526,8 +1526,8 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .prizes__contents::after {
-    height: calc(100% - 228px);
-    bottom: 80px;
+    height: calc(100% - 148px);
+    bottom: 0px;
   }
 }
 
@@ -1647,6 +1647,19 @@ section[id] {
   }
   .prize-card:nth-child(n+3) .prize-card__name {
     font-size: 16px;
+    min-height: 80px;
+  }
+  .prize-card:nth-child(n+3) .prize-card__name::after {
+    width: 64px;
+    height: 64px;
+  }
+  .prize-card:nth-child(n+3) .prize-card__zoom {
+    width: 20px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .prize-card:nth-child(n+3) .prize-card__button {
+    border-radius: 16px;
   }
 }
 
@@ -1878,7 +1891,7 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .prizes__bg {
-    margin-top: 0;
+    margin-top: 3px;
   }
 }
 
