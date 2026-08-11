@@ -1418,7 +1418,7 @@ section[id] {
 
   @include mq(lg) {
     max-width: 100%;
-    padding: 30px 54px 49px;
+    padding: 30px 52px 49px;
   }
 
   &::before,
@@ -1525,7 +1525,7 @@ section[id] {
 
   @include mq(lg) {
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 34px;
+    column-gap: 40px;
     row-gap: 80px;
     margin-top: 82px;
   }
