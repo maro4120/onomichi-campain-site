@@ -1925,11 +1925,13 @@ section[id] {
   width: 100%;
   height: min(46px, 12.2666666667vw);
   background: url(../img/pr-bg_wave.svg) repeat-x top left/auto 100%;
+  background-position-x: -12px;
   pointer-events: none;
 }
 @media screen and (min-width: 900px) {
   .spots::before, .spots::after {
     height: 120px;
+    background-position-x: -30px;
   }
 }
 .spots::before {
