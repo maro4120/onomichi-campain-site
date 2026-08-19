@@ -1836,6 +1836,7 @@ section[id] {
 .spots {
   position: relative;
   padding-top: vw(40);
+  padding-bottom: vw(4);
   background-color: $color-key1;
 
   --scroll-offset: calc(#{$header-height} + #{vw(46)});
@@ -1906,7 +1907,6 @@ section[id] {
   font-size: vw(28);
   font-weight: 500;
   line-height: 1.25;
-  margin-right: -0.25em;
   color: #fff;
   padding-left: vw(36);
 
