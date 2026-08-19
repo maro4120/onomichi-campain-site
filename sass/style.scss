@@ -1835,12 +1835,13 @@ section[id] {
 
 .spots {
   position: relative;
-  padding-bottom: vw(4);
+  padding-top: vw(40);
   background-color: $color-key1;
 
   --scroll-offset: calc(#{$header-height} + #{vw(46)});
 
   @include mq(lg) {
+    padding-top: 120px;
     --scroll-offset: calc(#{$header-height} + 120px);
   }
 
@@ -1903,7 +1904,7 @@ section[id] {
   font-size: vw(28);
   font-weight: 500;
   line-height: 1.25;
-  letter-spacing: 0.25em;
+  margin-right: -0.25em;
   color: #fff;
   padding-left: vw(36);
 
@@ -1913,6 +1914,8 @@ section[id] {
     line-height: 1;
     padding-left: 0;
     padding-top: 56px;
+    margin-right: 0;
+    margin-bottom: -0.25em;
   }
 
   &::before {
@@ -1920,8 +1923,8 @@ section[id] {
     position: absolute;
     top: 50%;
     left: 0;
-    width: vw(28);
-    height: vw(28);
+    width: vw(19);
+    height: vw(19);
     background: url(../img/sp-hoshi-Icon.png) no-repeat center center / contain;
     transform: translateY(-50%);
 
