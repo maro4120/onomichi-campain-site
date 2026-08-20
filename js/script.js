@@ -64,7 +64,7 @@ const swiper = new Swiper("#js-spots-swiper", {
   },
   breakpoints: {
     900: {
-      spaceBetween: 24,
+      spaceBetween: 32,
       centeredSlides: false,
     },
   },

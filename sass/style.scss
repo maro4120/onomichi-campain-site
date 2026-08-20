@@ -1826,6 +1826,7 @@ section[id] {
   display: block;
   width: 100%;
   min-width: 580px;
+
   img {
     max-width: 100%;
     height: auto;
@@ -1835,14 +1836,12 @@ section[id] {
 
 .spots {
   position: relative;
-  padding-top: vw(40);
   padding-bottom: vw(4);
   background-color: $color-key1;
 
   --scroll-offset: calc(#{$header-height} + #{vw(46)});
 
   @include mq(lg) {
-    padding-top: 120px;
     --scroll-offset: calc(#{$header-height} + 120px);
   }
 
@@ -1854,12 +1853,10 @@ section[id] {
     width: 100%;
     height: vw(46);
     background: url(../img/pr-bg_wave.svg) repeat-x top left / auto 100%;
-    background-position-x: -12px;
     pointer-events: none;
 
     @include mq(lg) {
       height: 120px;
-      background-position-x: -30px;
     }
   }
 
@@ -1875,9 +1872,10 @@ section[id] {
 
 .spots__decoration-pawpads {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80px;
+  bottom: 8px;
+  left: 36px;
+  width: 100px;
+  height: 220px;
 }
 
 .spots__outer {
@@ -1897,6 +1895,7 @@ section[id] {
 
   @include mq(lg) {
     width: 56px;
+    margin-top: 8px;
   }
 }
 
@@ -1915,20 +1914,21 @@ section[id] {
     font-size: 40px;
     line-height: 1;
     padding-left: 0;
-    padding-top: 56px;
+    padding-top: 62px;
     margin-right: 0;
     margin-bottom: -0.25em;
+    letter-spacing: 0.25em;
   }
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: vw(4);
     width: vw(19);
     height: vw(19);
     background: url(../img/sp-hoshi-Icon.png) no-repeat center center / contain;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
 
     @include mq(lg) {
       top: 0;
@@ -1976,7 +1976,7 @@ section[id] {
   @include mq(lg) {
     border-radius: 24px;
     padding-inline: 32px;
-    padding-bottom: 40px;
+    padding-bottom: 43px;
     gap: 24px;
   }
 }
@@ -2160,9 +2160,8 @@ section[id] {
 }
 
 .spots__button {
-  @include mq(xl) {
-    margin-top: 24px;
-  }
+  margin-top: vw(22);
+  padding-bottom: vw(14);
 }
 
 .qa {
