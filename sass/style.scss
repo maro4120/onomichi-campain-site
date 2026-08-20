@@ -1826,6 +1826,11 @@ section[id] {
   display: block;
   width: 100%;
   min-width: 580px;
+  padding-bottom: vw(7);
+
+  @include mq(lg) {
+    padding-bottom: 0;
+  }
 
   img {
     max-width: 100%;
@@ -1838,11 +1843,14 @@ section[id] {
   position: relative;
   padding-bottom: vw(4);
   background-color: $color-key1;
+  height: 634px;
 
   --scroll-offset: calc(#{$header-height} + #{vw(46)});
 
   @include mq(lg) {
     --scroll-offset: calc(#{$header-height} + 120px);
+    padding-bottom: 0;
+    height: 716px;
   }
 
   &::before,
@@ -1867,12 +1875,13 @@ section[id] {
   &::after {
     top: 100%;
     transform: scaleY(-1);
+    background-position-x: -6px;
   }
 }
 
 .spots__decoration-pawpads {
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   left: 36px;
   width: 100px;
   height: 220px;
@@ -2033,7 +2042,7 @@ section[id] {
   margin-left: auto;
 
   @include mq(xl) {
-    max-width: 944px;
+    max-width: 965px;
   }
 }
 
@@ -2050,7 +2059,7 @@ section[id] {
 
   @include mq(xl) {
     bottom: 40px;
-    left: -10px;
+    left: 0px;
   }
 }
 
@@ -2131,6 +2140,7 @@ section[id] {
     transform: none;
     position: static;
     width: 495px;
+    margin-top: -11px;
   }
 
   img {
@@ -2162,6 +2172,11 @@ section[id] {
 .spots__button {
   margin-top: vw(22);
   padding-bottom: vw(14);
+
+  @include mq(xl) {
+    margin-top: 25px;
+    margin-right: -2px;
+  }
 }
 
 .qa {
@@ -2174,14 +2189,20 @@ section[id] {
   }
 }
 
-.qa__inner {
+.qa__heading {
+  .heading__icon {
+    padding: vw(6) vw(2);
+  }
+  .heading__en {
+    margin-top: vw(3);
+  }
 }
 
 .qa__items {
   margin-top: vw(24);
 
   @include mq(lg) {
-    margin-top: 40px;
+    margin-top: 38px;
   }
 }
 
@@ -2205,7 +2226,7 @@ section[id] {
   align-items: center;
   gap: vw(12);
   width: 100%;
-  padding: vw(12) vw(16);
+  padding: vw(10) vw(14);
   background: transparent;
   border: none;
   text-align: left;
@@ -2213,7 +2234,7 @@ section[id] {
 
   @include mq(lg) {
     gap: 16px;
-    padding: 24px;
+    padding: 22px;
   }
 }
 
@@ -2235,6 +2256,11 @@ section[id] {
   border-radius: 50%;
   background-color: $main-color;
 
+  @include mq(lg) {
+    width: 48px;
+    height: 48px;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -2248,6 +2274,11 @@ section[id] {
   &::before {
     width: vw(10);
     height: vw(1.5);
+
+    @include mq(lg) {
+      width: 18px;
+      height: 2.6px;
+    }
   }
   &::after {
     width: vw(1.5);
@@ -2266,12 +2297,12 @@ section[id] {
 
 .qa-item__answer-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: vw(16);
-  padding: 16px;
+  padding: 15px;
 
   @include mq(lg) {
-    padding: 24px;
+    padding: 22px;
   }
 }
 
@@ -2281,6 +2312,10 @@ section[id] {
   font-size: vw(24);
   line-height: 1.25;
   color: $main-color;
+
+  @include mq(lg) {
+    font-size: 32px;
+  }
 }
 
 .qa-item__text {
@@ -2296,7 +2331,7 @@ section[id] {
 }
 
 .info {
-  padding-top: vw(40);
+  padding-top: vw(28);
 
   @include mq(lg) {
     padding-top: 120px;
@@ -2308,7 +2343,7 @@ section[id] {
 
 .info__card {
   border: 8px solid #fff;
-  padding-top: vw(24);
+  padding-top: vw(18);
   padding-inline: vw(15.5);
   padding-bottom: vw(40);
   background: rgba(255, 255, 255, 0.5);
@@ -2322,10 +2357,14 @@ section[id] {
   .heading__icon {
     padding-block: vw(7);
   }
+
+  .heading__en {
+    margin-top: vw(4);
+  }
 }
 
 .info__list {
-  margin-top: vw(24);
+  margin-top: vw(12);
 
   @include mq(lg) {
     margin-top: 40px;
@@ -2377,7 +2416,7 @@ section[id] {
 }
 
 .info__desc {
-  margin-top: vw(8);
+  margin-top: vw(6);
   padding-bottom: vw(16);
 
   a {
@@ -2397,7 +2436,11 @@ section[id] {
 
 .info__notes {
   list-style-type: "・";
-  padding-left: 1em;
+  padding-left: 1.25em;
+
+  li {
+    letter-spacing: 1.5;
+  }
 }
 
 .info__bg {

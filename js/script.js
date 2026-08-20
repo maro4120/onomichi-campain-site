@@ -56,7 +56,7 @@ document.querySelectorAll(".prize-modal").forEach((modal) => {
 const swiper = new Swiper("#js-spots-swiper", {
   loop: true,
   slidesPerView: "auto",
-  spaceBetween: 12,
+  spaceBetween: 14,
   centeredSlides: true,
   navigation: {
     nextEl: '#js-spots-next',
