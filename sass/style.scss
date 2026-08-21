@@ -2710,9 +2710,11 @@ $form-error-bg: #fdeff5;
   display: flex;
   justify-content: center;
   margin-top: vw(24);
+}
 
+.contact-form__row + .contact-form__row--privacy {
   @include mq(lg) {
-    margin-top: 40px !important;
+    margin-top: 40px;
   }
 }
 
@@ -2805,7 +2807,7 @@ $form-error-bg: #fdeff5;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: vw(32);
+  gap: vw(40);
   margin-top: vw(24);
 
   @include mq(lg) {
