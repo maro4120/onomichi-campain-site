@@ -2301,7 +2301,12 @@ section[id] {
   padding: min(6px, 1.6vw) min(2px, 0.5333333333vw);
 }
 .qa__heading .heading__en {
-  margin-top: min(5px, 1.3333333333vw);
+  margin-top: min(3px, 0.8vw);
+}
+@media screen and (min-width: 900px) {
+  .qa__heading .heading__en {
+    margin-top: 5px;
+  }
 }
 
 .qa__items {
@@ -2576,8 +2581,8 @@ section[id] {
 
 .info__notes {
   list-style-type: "・";
-  padding-left: 1.25em;
-  line-height: 1.625;
+  padding-left: 1.35em;
+  line-height: 1.59;
 }
 @media screen and (min-width: 900px) {
   .info__notes {
@@ -2588,7 +2593,7 @@ section[id] {
 
 .info__bg {
   display: block;
-  margin-top: min(34px, 9.0666666667vw);
+  margin-top: min(30px, 8vw);
 }
 @media screen and (min-width: 900px) {
   .info__bg {
