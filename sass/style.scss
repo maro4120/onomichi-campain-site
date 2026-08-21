@@ -2476,7 +2476,8 @@ $form-error: #e5006d;
 $form-error-bg: #fdeff5;
 
 .contact {
-  padding-block: vw(40);
+  padding-top: vw(40);
+  padding-bottom: vw(45);
   background: #fff;
 
   @include mq(lg) {
@@ -2489,7 +2490,7 @@ $form-error-bg: #fdeff5;
   text-align: center;
 
   @include mq(lg) {
-    margin-top: 32px;
+    margin-top: 33px;
     font-size: 16px;
   }
 }
@@ -2516,6 +2517,15 @@ $form-error-bg: #fdeff5;
   @include mq(lg) {
     display: flex;
     align-items: center;
+
+    &:nth-child(4) {
+      margin-top: 39px;
+    }
+
+    &:nth-child(5) {
+      margin-top: 39px;
+      align-items: start;
+    }
   }
 }
 
@@ -2526,7 +2536,7 @@ $form-error-bg: #fdeff5;
 
   @include mq(lg) {
     flex-shrink: 0;
-    width: 252px;
+    width: 220px;
   }
 }
 
@@ -2552,7 +2562,7 @@ $form-error-bg: #fdeff5;
 }
 
 .contact-form__field {
-  margin-top: vw(8);
+  margin-top: vw(7);
 
   @include mq(lg) {
     flex: 1;
@@ -2702,7 +2712,7 @@ $form-error-bg: #fdeff5;
   margin-top: vw(24);
 
   @include mq(lg) {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 }
 
@@ -2737,9 +2747,10 @@ $form-error-bg: #fdeff5;
 
 .contact-check__text {
   font-size: vw(14);
+  transform: translateX(-4px);
 
   @include mq(lg) {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   a {
@@ -2748,11 +2759,19 @@ $form-error-bg: #fdeff5;
 }
 
 .contact-form__submit {
-  margin-top: vw(24);
+  margin-top: vw(20);
   text-align: center;
 
   @include mq(lg) {
-    margin-top: 40px;
+    margin-top: 36px;
+
+    .button {
+      font-size: 16px;
+      width: 240px;
+      height: 40px;
+      margin-inline: auto;
+      padding: 6px 24px 8px;
+    }
   }
 }
 
