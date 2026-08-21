@@ -2194,7 +2194,7 @@ section[id] {
     padding: vw(6) vw(2);
   }
   .heading__en {
-    margin-top: vw(3);
+    margin-top: vw(5);
   }
 }
 
@@ -2202,7 +2202,7 @@ section[id] {
   margin-top: vw(24);
 
   @include mq(lg) {
-    margin-top: 38px;
+    margin-top: 41px;
   }
 }
 
@@ -2233,8 +2233,8 @@ section[id] {
   cursor: pointer;
 
   @include mq(lg) {
-    gap: 16px;
-    padding: 22px;
+    gap: 17px;
+    padding: 20px;
   }
 }
 
@@ -2283,6 +2283,10 @@ section[id] {
   &::after {
     width: vw(1.5);
     height: vw(10);
+
+    @include mq(lg) {
+      height: 18px;
+    }
   }
 }
 
@@ -2302,7 +2306,7 @@ section[id] {
   padding: 15px;
 
   @include mq(lg) {
-    padding: 22px;
+    padding: 23px;
   }
 }
 
@@ -2349,7 +2353,7 @@ section[id] {
   background: rgba(255, 255, 255, 0.5);
 
   @include mq(lg) {
-    padding: 40px 56px;
+    padding: 40px 54px 33px;
   }
 }
 
@@ -2367,7 +2371,7 @@ section[id] {
   margin-top: vw(12);
 
   @include mq(lg) {
-    margin-top: 40px;
+    margin-top: 28px;
   }
 }
 
@@ -2377,8 +2381,9 @@ section[id] {
 
   @include mq(lg) {
     display: flex;
-    padding-block: 12px;
-    margin-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    margin-left: 8px;
   }
 
   &:last-child {
@@ -2409,8 +2414,7 @@ section[id] {
 
   @include mq(lg) {
     flex-shrink: 0;
-    width: 240px;
-    padding-left: 20px;
+    width: 224px;
     font-size: 16px;
   }
 }
@@ -2418,6 +2422,10 @@ section[id] {
 .info__desc {
   margin-top: vw(6);
   padding-bottom: vw(16);
+
+  @include mq(lg) {
+    padding-bottom: 0;
+  }
 
   a {
     text-decoration: underline;
@@ -2438,6 +2446,11 @@ section[id] {
   list-style-type: "・";
   padding-left: 1.25em;
   line-height: 1.625;
+
+  @include mq(lg) {
+    padding-left: 1.5em;
+    line-height: 1.63;
+  }
 }
 
 .info__bg {

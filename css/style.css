@@ -2301,7 +2301,7 @@ section[id] {
   padding: min(6px, 1.6vw) min(2px, 0.5333333333vw);
 }
 .qa__heading .heading__en {
-  margin-top: min(3px, 0.8vw);
+  margin-top: min(5px, 1.3333333333vw);
 }
 
 .qa__items {
@@ -2309,7 +2309,7 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .qa__items {
-    margin-top: 38px;
+    margin-top: 41px;
   }
 }
 
@@ -2345,8 +2345,8 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .qa-item__question {
-    gap: 16px;
-    padding: 22px;
+    gap: 17px;
+    padding: 20px;
   }
 }
 
@@ -2405,6 +2405,11 @@ section[id] {
   width: min(1.5px, 0.4vw);
   height: min(10px, 2.6666666667vw);
 }
+@media screen and (min-width: 900px) {
+  .qa-item__icon::after {
+    height: 18px;
+  }
+}
 
 .qa-item__answer {
   display: none;
@@ -2426,7 +2431,7 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .qa-item__answer-inner {
-    padding: 22px;
+    padding: 23px;
   }
 }
 
@@ -2476,7 +2481,7 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .info__card {
-    padding: 40px 56px;
+    padding: 40px 54px 33px;
   }
 }
 
@@ -2492,7 +2497,7 @@ section[id] {
 }
 @media screen and (min-width: 900px) {
   .info__list {
-    margin-top: 40px;
+    margin-top: 28px;
   }
 }
 
@@ -2505,8 +2510,9 @@ section[id] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-block: 12px;
-    margin-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    margin-left: 8px;
   }
 }
 .info__row:last-child {
@@ -2538,8 +2544,7 @@ section[id] {
   .info__term {
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    width: 240px;
-    padding-left: 20px;
+    width: 224px;
     font-size: 16px;
   }
 }
@@ -2547,6 +2552,11 @@ section[id] {
 .info__desc {
   margin-top: min(6px, 1.6vw);
   padding-bottom: min(16px, 4.2666666667vw);
+}
+@media screen and (min-width: 900px) {
+  .info__desc {
+    padding-bottom: 0;
+  }
 }
 .info__desc a {
   text-decoration: underline;
@@ -2568,6 +2578,12 @@ section[id] {
   list-style-type: "・";
   padding-left: 1.25em;
   line-height: 1.625;
+}
+@media screen and (min-width: 900px) {
+  .info__notes {
+    padding-left: 1.5em;
+    line-height: 1.63;
+  }
 }
 
 .info__bg {
