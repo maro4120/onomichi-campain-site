@@ -1118,7 +1118,7 @@ section[id] {
     transform: translateX(-50%);
     width: vw(7);
     height: vw(34);
-    background: url(../img/sp/how-line.png) no-repeat center / contain;
+    background: url(../img/sp/how-line.webp) no-repeat center / contain;
     z-index: 3;
 
     @include mq(lg) {
@@ -1128,7 +1128,7 @@ section[id] {
       transform: initial;
       width: 70px;
       height: 16px;
-      background: url(../img/how-line.png) no-repeat center / contain;
+      background: url(../img/how-line.webp) no-repeat center / contain;
     }
 
     @include mq(xl) {
@@ -1435,10 +1435,10 @@ section[id] {
     transform: translateX(-50%);
     width: vw(238);
     height: vw(83);
-    background: url(../img/sp/pr-deco.png) no-repeat center center / cover;
+    background: url(../img/sp/pr-deco.webp) no-repeat center center / cover;
 
     @include mq(lg) {
-      background: url(../img/pr-deco.png) no-repeat center center / cover;
+      background: url(../img/pr-deco.webp) no-repeat center center / cover;
       height: 148px;
       width: 372px;
     }
@@ -1936,7 +1936,7 @@ section[id] {
     left: vw(4);
     width: vw(19);
     height: vw(19);
-    background: url(../img/sp-hoshi-Icon.png) no-repeat center center / contain;
+    background: url(../img/sp-hoshi-Icon.webp) no-repeat center center / contain;
     transform: translateY(-55%);
 
     @include mq(lg) {
@@ -2097,7 +2097,7 @@ section[id] {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 27px;
-    background: url(../img/sp-arrow-l.png) no-repeat center center / contain;
+    background: url(../img/sp-arrow-l.webp) no-repeat center center / contain;
   }
 }
 
@@ -2111,7 +2111,7 @@ section[id] {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 27px;
-    background: url(../img/sp-arrow-r.png) no-repeat center center / contain;
+    background: url(../img/sp-arrow-r.webp) no-repeat center center / contain;
   }
 }
 
