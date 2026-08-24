@@ -186,6 +186,10 @@ section[id] {
   justify-content: space-between;
   padding-block: 0;
   padding-inline: 20px;
+
+  @include mq(xl) {
+    padding-inline: 24px;
+  }
 }
 
 .header__logo {
@@ -205,7 +209,7 @@ section[id] {
 
 .header__nav {
   display: none;
-  gap: 16px;
+  gap: 13px;
 
   @include mq(xl) {
     display: flex;
@@ -278,11 +282,11 @@ section[id] {
   }
 
   & > .drawer-icon__bar-block + .drawer-icon__bar {
-    top: vw(11);
+    top: vw(12);
   }
 
   & > .drawer-icon__bar:last-child {
-    top: vw(22);
+    top: vw(24);
   }
 
   &.is-checked {
@@ -642,7 +646,7 @@ section[id] {
 .about {
   position: relative;
   padding-top: vw(32);
-  overflow: hidden;
+  overflow-x: clip;
 
   @include mq(lg) {
     padding-top: 70px;
@@ -2807,11 +2811,12 @@ $form-error-bg: #fdeff5;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: vw(40);
-  margin-top: vw(24);
+  gap: vw(44);
+  margin-top: vw(25);
 
   @include mq(lg) {
-    gap: 40px;
+    gap: 45px;
+    margin-top: 28px;
   }
 
   a {
@@ -2824,20 +2829,20 @@ $form-error-bg: #fdeff5;
   }
 
   img {
-    width: vw(32);
+    width: vw(28);
 
     @include mq(lg) {
-      width: 40px;
+      width: 35px;
     }
   }
 }
 
 .footer__body {
   position: relative;
-  margin-top: vw(48);
+  margin-top: vw(51);
 
   @include mq(lg) {
-    margin-top: 120px;
+    margin-top: 122px;
   }
 }
 
@@ -2851,7 +2856,7 @@ $form-error-bg: #fdeff5;
   pointer-events: none;
 
   @include mq(lg) {
-    top: -82px;
+    top: -80px;
     width: 755px;
   }
 
@@ -2871,6 +2876,7 @@ $form-error-bg: #fdeff5;
   @include mq(lg) {
     display: flex;
     flex-direction: row-reverse;
+    height: 400px;
   }
 }
 
@@ -2888,11 +2894,11 @@ $form-error-bg: #fdeff5;
 }
 
 .footer__info {
-  padding: vw(24);
+  padding: vw(21) vw(21) vw(30);
 
   @include mq(lg) {
     width: 50%;
-    padding: 102px 61.5px 106px;
+    padding: 106px 61px 106px;
   }
 }
 
@@ -2912,7 +2918,11 @@ $form-error-bg: #fdeff5;
 }
 
 .footer__list {
-  margin-top: vw(24);
+  margin-top: vw(29);
+
+  @include mq(lg) {
+    margin-top: 25px;
+  }
 }
 
 .footer__row {
@@ -2931,24 +2941,30 @@ $form-error-bg: #fdeff5;
 .footer__term {
   position: relative;
   flex-shrink: 0;
-  width: vw(80);
-  padding-left: vw(16);
+  width: vw(86);
+  padding-left: vw(23);
   font-weight: 700;
 
   @include mq(lg) {
     width: 120px;
     font-size: 16px;
+    padding-left: 17px;
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: 0.4em;
-    left: 0;
+    top: 0.5em;
+    left: 8%;
     width: vw(8);
     height: vw(8);
     background: $main-color;
     border-radius: 50%;
+
+    @include mq(lg) {
+      top: 32%;
+      left: 0;
+    };
   }
 }
 
@@ -2979,7 +2995,7 @@ $form-error-bg: #fdeff5;
   @include mq(lg) {
     position: fixed;
     right: 40px;
-    top: 840px;
+    bottom: 40px;
     z-index: 10;
     width: 100px;
     margin-block: 0;
