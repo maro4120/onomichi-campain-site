@@ -1828,7 +1828,8 @@ section[id] {
     left: 0;
     width: 100%;
     height: vw(46);
-    background: url(../img/pr-bg_wave.svg) repeat-x top left / auto 100%;
+    background: url(../img/pr-bg_wave.svg) repeat-x top left;
+    background-size: 96px 100%;
     pointer-events: none;
 
     @include mq(lg) {
