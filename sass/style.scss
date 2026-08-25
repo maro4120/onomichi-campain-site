@@ -106,6 +106,7 @@ section[id] {
 .button {
   display: inline-block;
   padding: vw(6) vw(24) vw(8) vw(24);
+  color: $text-color;
   width: max-content;
   height: vw(40);
   text-align: center;
