@@ -3236,7 +3236,8 @@ section[id] {
   left: 0;
   width: 100%;
   height: min(46px, 12.2666666667vw);
-  background: url(../img/pr-bg_wave.svg) repeat-x bottom left/auto 100%;
+  background: url(../img/pr-bg_wave.svg) repeat-x bottom left;
+  background-size: 96px 100%;
   pointer-events: none;
 }
 @media screen and (min-width: 900px) {

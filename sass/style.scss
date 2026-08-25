@@ -2992,7 +2992,8 @@ $form-error-bg: #fdeff5;
     left: 0;
     width: 100%;
     height: vw(46);
-    background: url(../img/pr-bg_wave.svg) repeat-x bottom left / auto 100%;
+    background: url(../img/pr-bg_wave.svg) repeat-x bottom left;
+    background-size: 96px 100%;
     pointer-events: none;
 
     @include mq(lg) {
