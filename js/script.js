@@ -144,7 +144,7 @@ if (contactForm) {
     contactForm.reset();
     contactForm.querySelectorAll(".is-error").forEach(function (row) {
       row.classList.remove("is-error");
-      row.querySelectorAll("[arie-invalid]").forEach(function (f){
+      row.querySelectorAll("[aria-invalid]").forEach(function (f){
         f.removeAttribute("aria-invalid");
       });
     });
