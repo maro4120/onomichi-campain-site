@@ -1835,6 +1835,7 @@ section[id] {
 
     @include mq(lg) {
       height: 120px;
+      background-size: 252px 100%;
     }
   }
 
@@ -2998,6 +2999,7 @@ $form-error-bg: #fdeff5;
 
     @include mq(lg) {
       height: 120px;
+      background-size: 252px 100%;
     }
   }
 }

@@ -1945,6 +1945,7 @@ section[id] {
 @media screen and (min-width: 900px) {
   .spots::before, .spots::after {
     height: 120px;
+    background-size: 252px 100%;
   }
 }
 .spots::before {
@@ -3243,6 +3244,7 @@ section[id] {
 @media screen and (min-width: 900px) {
   .footer__bottom::before {
     height: 120px;
+    background-size: 252px 100%;
   }
 }
 
